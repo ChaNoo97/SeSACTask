@@ -21,7 +21,6 @@ class ScenelifecycleViewController: UIViewController {
 	}
 	override func viewWillDisappear(_ animated: Bool) {
 		print(self, #function)
-		print("test")
 	}
 	
 }
