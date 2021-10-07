@@ -48,7 +48,10 @@ class mainViewController: UIViewController {
 		labelDesgin(lbl: Label7, labelWord: "심심해\(number7)", fontSize: 20)
 		labelDesgin(lbl: Label8, labelWord: "심심해\(number8)", fontSize: 20)
 		labelDesgin(lbl: Label9, labelWord: "속상해\(number9)", fontSize: 20)
-		
+		//테두리 색상
+		Label9.layer.borderColor = UIColor.white.cgColor
+		//커스텀 시멘틱 컬러 지정 - 에셋 이름에 유의
+		Label9.backgroundColor = UIColor(named:"color")
 		
     }
 	

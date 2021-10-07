@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -298,6 +299,37 @@
             </objects>
             <point key="canvasLocation" x="289.85507246376812" y="102.45535714285714"/>
         </scene>
+        <!--Day View Controller-->
+        <scene sceneID="hvX-6L-zGX">
+            <objects>
+                <viewController id="nb3-OS-les" customClass="DDayViewController" customModule="EmotionDiarymine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xeF-1n-LYG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mx2-o9-DmU">
+                                <rect key="frame" x="0.0" y="217" width="414" height="216"/>
+                                <connections>
+                                    <action selector="dataPickerValueChanged:" destination="nb3-OS-les" eventType="valueChanged" id="c4Z-sN-hZr"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HJe-sP-hfc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mx2-o9-DmU" firstAttribute="trailing" secondItem="HJe-sP-hfc" secondAttribute="trailing" id="H3p-80-aaz"/>
+                            <constraint firstItem="mx2-o9-DmU" firstAttribute="top" secondItem="HJe-sP-hfc" secondAttribute="top" constant="173" id="K2k-IP-j1B"/>
+                            <constraint firstItem="mx2-o9-DmU" firstAttribute="leading" secondItem="HJe-sP-hfc" secondAttribute="leading" id="jAh-Z0-DYf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="mx2-o9-DmU" id="uAA-UF-aYJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8p-7S-YWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="81"/>
+        </scene>
         <!--title-->
         <scene sceneID="Ldl-Bj-GjU">
             <objects>
@@ -327,5 +359,8 @@
         <image name="mono_slime7" width="278" height="258"/>
         <image name="mono_slime8" width="278" height="258"/>
         <image name="mono_slime9" width="278" height="258"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
