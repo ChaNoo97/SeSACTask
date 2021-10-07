@@ -90,6 +90,45 @@ class mainViewController: UIViewController {
 		Label3.text = "좋아해\(updatenumber)"
 	}
 	
+	@IBAction func button4Clicked(_ sender: UIButton) {
+		let number = UserDefaults.standard.integer(forKey: "number4")
+		UserDefaults.standard.set(number+1, forKey: "number4")
+		let updatenumber = UserDefaults.standard.integer(forKey: "number4")
+		Label4.text = "당황해\(updatenumber)"
+	}
+	@IBAction func button5Clicked(_ sender: UIButton) {
+		let number = UserDefaults.standard.integer(forKey: "number5")
+		UserDefaults.standard.set(number+1, forKey: "number5")
+		let updatenumber = UserDefaults.standard.integer(forKey: "number5")
+		Label5.text = "속상해\(updatenumber)"
+	}
+	@IBAction func button6Clicked(_ sender: UIButton) {
+		let number = UserDefaults.standard.integer(forKey: "number6")
+		UserDefaults.standard.set(number+1, forKey: "number6")
+		let updatenumber = UserDefaults.standard.integer(forKey: "number6")
+		Label6.text = "우울해\(updatenumber)"
+	}
+	@IBAction func button7Clicked(_ sender: UIButton) {
+		let number = UserDefaults.standard.integer(forKey: "number7")
+		UserDefaults.standard.set(number+1, forKey: "number7")
+		let updatenumber = UserDefaults.standard.integer(forKey: "number7")
+		Label7.text = "심심해\(updatenumber)"
+	}
+	
+	@IBAction func button8Clicked(_ sender: UIButton) {
+		let number = UserDefaults.standard.integer(forKey: "number8")
+		UserDefaults.standard.set(number+1, forKey: "number8")
+		let updatenumber = UserDefaults.standard.integer(forKey: "number8")
+		Label8.text = "어려워\(updatenumber)"
+	}
+	
+	@IBAction func button9Clicked(_ sender: UIButton) {
+		let number = UserDefaults.standard.integer(forKey: "number9")
+		UserDefaults.standard.set(number+1, forKey: "number9")
+		let updatenumber = UserDefaults.standard.integer(forKey: "number9")
+		Label9.text = "절망\(updatenumber)"
+	}
+	
 	@IBAction func clearButtonClicked(_ sender: UIButton) {
 		let alert = UIAlertController(title: "알림", message: "초기화 하시겠습니까?", preferredStyle: .alert)
 		let close = UIAlertAction(title: "취소", style: .default)
@@ -97,6 +136,12 @@ class mainViewController: UIViewController {
 			self.clearButton(numbername: "number1", lbl: self.Label1, text: "행복해")
 			self.clearButton(numbername:"number2", lbl:self.Label2, text:"사랑해")
 			self.clearButton(numbername: "number3", lbl: self.Label3, text: "좋아해")
+			self.clearButton(numbername: "number4", lbl: self.Label4, text: "당황해")
+			self.clearButton(numbername: "number5", lbl: self.Label5, text: "속상해")
+			self.clearButton(numbername: "number6", lbl: self.Label6, text: "우울해")
+			self.clearButton(numbername: "number7", lbl: self.Label7, text: "심심해")
+			self.clearButton(numbername: "number8", lbl: self.Label8, text: "어려워")
+			self.clearButton(numbername: "number9", lbl: self.Label9, text: "절망")
 		}
 		alert.addAction(confirm)
 		alert.addAction(close)

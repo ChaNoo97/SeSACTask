@@ -27,6 +27,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="mono_slime5"/>
+                                        <connections>
+                                            <action selector="button5Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHp-1b-9P0"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6U-Y7-Kgf">
                                         <rect key="frame" x="0.0" y="100" width="100" height="50"/>
@@ -132,6 +135,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="mono_slime4"/>
+                                        <connections>
+                                            <action selector="button4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7BZ-cT-8Hz"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQa-HU-oaf">
                                         <rect key="frame" x="0.0" y="100" width="100" height="50"/>
@@ -156,6 +162,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="mono_slime6"/>
+                                        <connections>
+                                            <action selector="button6Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKp-ae-KNd"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-Oj-F8V">
                                         <rect key="frame" x="0.0" y="100" width="100" height="50"/>
@@ -180,6 +189,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="mono_slime7"/>
+                                        <connections>
+                                            <action selector="button7Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6A5-80-sKE"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUm-sS-yaF">
                                         <rect key="frame" x="0.0" y="100" width="100" height="50"/>
@@ -206,6 +218,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="mono_slime8"/>
+                                        <connections>
+                                            <action selector="button8Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ni-wy-A6r"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRS-Ft-QxZ">
                                         <rect key="frame" x="0.0" y="100" width="100" height="50"/>
@@ -232,6 +247,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="mono_slime9"/>
+                                        <connections>
+                                            <action selector="button9Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hip-ms-anb"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r06-Dr-jVK">
                                         <rect key="frame" x="0.0" y="100" width="100" height="50"/>
@@ -259,26 +277,32 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.84679234629929667" green="0.72008012604722904" blue="0.54278005600282608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="1fu-NA-LVv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="3CZ-l2-9ZA"/>
-                            <constraint firstItem="c6E-6M-pqi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="A81-Y1-Tqm"/>
-                            <constraint firstItem="fvb-9O-BMW" firstAttribute="top" secondItem="Yts-Xh-MmD" secondAttribute="bottom" constant="38" id="ANV-fa-CBV"/>
-                            <constraint firstItem="1fu-NA-LVv" firstAttribute="leading" secondItem="c6E-6M-pqi" secondAttribute="trailing" constant="22" id="CaA-Pj-ltb"/>
-                            <constraint firstItem="c6E-6M-pqi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="DaW-H5-v7g"/>
-                            <constraint firstItem="DXa-40-Hul" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="Dwb-qm-L4F"/>
-                            <constraint firstItem="8ff-vS-sr7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Juu-ec-CN8"/>
-                            <constraint firstItem="8ff-vS-sr7" firstAttribute="leading" secondItem="Vbi-jf-6Bl" secondAttribute="trailing" constant="22" id="YQu-I6-la7"/>
-                            <constraint firstItem="J1c-x7-TKR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="cSK-9N-d9r"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yts-Xh-MmD" secondAttribute="trailing" constant="35" id="dFo-fr-DFV"/>
-                            <constraint firstItem="Yts-Xh-MmD" firstAttribute="top" secondItem="J1c-x7-TKR" secondAttribute="bottom" constant="38" id="flz-KI-0Br"/>
-                            <constraint firstItem="DXa-40-Hul" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="h2F-YQ-wFt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J1c-x7-TKR" secondAttribute="trailing" constant="35" id="hoi-8a-jD7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fvb-9O-BMW" secondAttribute="trailing" constant="35" id="l05-b5-gOs"/>
-                            <constraint firstItem="3ER-H2-btg" firstAttribute="top" secondItem="Vbi-jf-6Bl" secondAttribute="bottom" constant="38" id="myw-h1-Suv"/>
-                            <constraint firstItem="Vbi-jf-6Bl" firstAttribute="top" secondItem="c6E-6M-pqi" secondAttribute="bottom" constant="38" id="psm-Xy-ZoL"/>
-                            <constraint firstItem="Nwc-AH-Ry7" firstAttribute="top" secondItem="8ff-vS-sr7" secondAttribute="bottom" constant="38" id="rJW-4k-PyX"/>
-                            <constraint firstItem="3ER-H2-btg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="rp4-i3-Fht"/>
-                            <constraint firstItem="Nwc-AH-Ry7" firstAttribute="leading" secondItem="3ER-H2-btg" secondAttribute="trailing" constant="22" id="tgp-L7-cI6"/>
-                            <constraint firstItem="8ff-vS-sr7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uPP-e9-2VI"/>
+                            <constraint firstItem="Yts-Xh-MmD" firstAttribute="top" secondItem="J1c-x7-TKR" secondAttribute="bottom" constant="38" id="5C7-Q8-KnW"/>
+                            <constraint firstItem="DXa-40-Hul" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="617-dq-cvL"/>
+                            <constraint firstItem="fvb-9O-BMW" firstAttribute="top" secondItem="Yts-Xh-MmD" secondAttribute="bottom" constant="38" id="6Kz-M3-Hxn"/>
+                            <constraint firstItem="3ER-H2-btg" firstAttribute="top" secondItem="Vbi-jf-6Bl" secondAttribute="bottom" constant="38" id="7Zo-r0-0RV"/>
+                            <constraint firstItem="DXa-40-Hul" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="C65-kF-NPe"/>
+                            <constraint firstItem="c6E-6M-pqi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="FLs-l0-VzN"/>
+                            <constraint firstItem="c6E-6M-pqi" firstAttribute="top" secondItem="DXa-40-Hul" secondAttribute="bottom" constant="35" id="One-sY-SLY"/>
+                            <constraint firstItem="3ER-H2-btg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="QN0-tm-JDg"/>
+                            <constraint firstItem="8ff-vS-sr7" firstAttribute="top" secondItem="1fu-NA-LVv" secondAttribute="bottom" constant="38" id="R3r-iL-PhO"/>
+                            <constraint firstItem="Yts-Xh-MmD" firstAttribute="leading" secondItem="8ff-vS-sr7" secondAttribute="trailing" constant="22" id="RmZ-hz-qBp"/>
+                            <constraint firstItem="8ff-vS-sr7" firstAttribute="leading" secondItem="Vbi-jf-6Bl" secondAttribute="trailing" constant="22" id="TyV-Uf-zzp"/>
+                            <constraint firstItem="Nwc-AH-Ry7" firstAttribute="top" secondItem="8ff-vS-sr7" secondAttribute="bottom" constant="38" id="VhE-Cj-Aae"/>
+                            <constraint firstItem="fvb-9O-BMW" firstAttribute="leading" secondItem="Nwc-AH-Ry7" secondAttribute="trailing" constant="22" id="YXL-c2-anj"/>
+                            <constraint firstItem="Nwc-AH-Ry7" firstAttribute="leading" secondItem="3ER-H2-btg" secondAttribute="trailing" constant="22" id="Z2U-QJ-3Tc"/>
+                            <constraint firstItem="1fu-NA-LVv" firstAttribute="leading" secondItem="c6E-6M-pqi" secondAttribute="trailing" constant="22" id="Z8Y-mM-9Mq"/>
+                            <constraint firstItem="Yts-Xh-MmD" firstAttribute="leading" secondItem="8ff-vS-sr7" secondAttribute="trailing" constant="22" id="ZYr-lM-KGu"/>
+                            <constraint firstItem="1fu-NA-LVv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="bcU-2Q-riY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J1c-x7-TKR" secondAttribute="trailing" constant="35" id="e4b-XX-I3q"/>
+                            <constraint firstItem="fvb-9O-BMW" firstAttribute="leading" secondItem="Nwc-AH-Ry7" secondAttribute="trailing" constant="22" id="jb3-LT-HBN"/>
+                            <constraint firstItem="Vbi-jf-6Bl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="kwL-xR-Hd1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fvb-9O-BMW" secondAttribute="trailing" constant="35" id="nws-lJ-n9T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yts-Xh-MmD" secondAttribute="trailing" constant="35" id="qjT-aE-K8J"/>
+                            <constraint firstItem="Vbi-jf-6Bl" firstAttribute="top" secondItem="c6E-6M-pqi" secondAttribute="bottom" constant="38" id="tIi-Oy-lAB"/>
+                            <constraint firstItem="J1c-x7-TKR" firstAttribute="leading" secondItem="1fu-NA-LVv" secondAttribute="trailing" constant="22" id="vBg-gb-ilX"/>
+                            <constraint firstItem="Nwc-AH-Ry7" firstAttribute="leading" secondItem="3ER-H2-btg" secondAttribute="trailing" constant="22" id="wUl-Vj-ktz"/>
+                            <constraint firstItem="J1c-x7-TKR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="weg-by-JmD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="감정 다이어리" id="lAK-2A-vST"/>
