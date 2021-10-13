@@ -21,8 +21,15 @@ class mainViewController: UIViewController {
 	
 	@IBOutlet weak var clearButton: UIButton!
 	
+	let userNotificationCenter = UNUserNotificationCenter.current()
+	
+	let ud = UserDefaults.standard
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		
+		requestNotificationAuthorization()
+		
 		clearButton.setTitle("Clear", for: .normal)
 		clearButton.setTitleColor(.black, for: .normal)
 		clearButton.layer.cornerRadius = 10
@@ -55,7 +62,36 @@ class mainViewController: UIViewController {
 		
     }
 	
+	func requestNotificationAuthorization(){
+		let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
+
+			userNotificationCenter.requestAuthorization(options: authOptions) { success, error in
+				if success {
+					self.sendNotification()
+				}
+					}
+	}
 	
+	func sendNotification(){
+		let notificationContent = UNMutableNotificationContent()
+
+		notificationContent.title = "물 마실 시간이에요!"
+		notificationContent.body = "하루 2리터 목표 달성을 위해 열심히 달려보아요"
+		notificationContent.badge = 100
+		
+		//언제 보낼 지 설정: 1.간격 , 2. 캘린더, 3. 위치
+		let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
+		//알림 요청
+		let request = UNNotificationRequest(identifier: "\(Date())",
+											content: notificationContent,
+											trigger: trigger)
+
+		userNotificationCenter.add(request) { error in
+			if let error = error {
+				print("Notification Error: ", error)
+			}
+		}
+	}
 	func labelDesgin(lbl:UILabel, labelWord : String , fontSize : CGFloat){
 		lbl.font = UIFont.systemFont(ofSize: fontSize)
 		lbl.text = labelWord

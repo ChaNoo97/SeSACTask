@@ -15,6 +15,7 @@
 		FE1931A3270D6CB800C36A16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1931A1270D6CB800C36A16 /* LaunchScreen.storyboard */; };
 		FE1931AE270D7E9200C36A16 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1931AD270D7E9200C36A16 /* mainViewController.swift */; };
 		FE1931F2270E940800C36A16 /* DDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1931F1270E940800C36A16 /* DDayViewController.swift */; };
+		FE33AF31270FCACE00017DE1 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE33AF30270FCACE00017DE1 /* ExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FE1931A4270D6CB800C36A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1931AD270D7E9200C36A16 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		FE1931F1270E940800C36A16 /* DDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayViewController.swift; sourceTree = "<group>"; };
+		FE33AF30270FCACE00017DE1 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				FE193198270D6CB700C36A16 /* SceneDelegate.swift */,
 				FE19319A270D6CB700C36A16 /* ViewController.swift */,
 				FE19319C270D6CB700C36A16 /* Main.storyboard */,
+				FE33AF30270FCACE00017DE1 /* ExampleViewController.swift */,
 				FE1931F1270E940800C36A16 /* DDayViewController.swift */,
 				FE1931AD270D7E9200C36A16 /* mainViewController.swift */,
 				FE19319F270D6CB800C36A16 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				FE193197270D6CB700C36A16 /* AppDelegate.swift in Sources */,
 				FE193199270D6CB700C36A16 /* SceneDelegate.swift in Sources */,
 				FE1931AE270D7E9200C36A16 /* mainViewController.swift in Sources */,
+				FE33AF31270FCACE00017DE1 /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
