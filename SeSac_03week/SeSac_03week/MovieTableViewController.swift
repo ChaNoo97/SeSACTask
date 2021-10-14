@@ -9,25 +9,29 @@ import UIKit
 
 class MovieTableViewController: UITableViewController {
 
+	let movieInformation = MovieInformation()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+		return movieInformation.movie.count
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
 		//타입 캐스팅
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell else {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell else {
 			return UITableViewCell()
 		}
 		
-		cell.posterImageView.backgroundColor = .red
-		cell.titleLabel.text = "7번방의 선물"
-		cell.releaseDateLabel.text = "2021.02.02"
-		cell.overviewLabel.text = "영화줄거리가 보이는 곳입니다.영화줄거리가 보이는 곳입니다.영화줄거리가 보이는 곳입니다.영화줄거리가 보이는 곳입니다.영화줄거리가 보이는 곳입니다.영화줄거리가 보이는 곳입니다."
+		let row = movieInformation.movie[indexPath.row]
+		
+		cell.posterImageView.image = UIImage(named: row.title)
+		cell.titleLabel.text = row.title
+		cell.releaseDateLabel.text = row.releaseDate
+		cell.overviewLabel.text = row.overview
 		cell.overviewLabel.numberOfLines = 0
 		
 		

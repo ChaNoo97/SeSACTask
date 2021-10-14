@@ -11,8 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		var test: Int? = nil
-		print(test!)
+//		setBackgroundColor()
         // Do any additional setup after loading the view.
     }
     

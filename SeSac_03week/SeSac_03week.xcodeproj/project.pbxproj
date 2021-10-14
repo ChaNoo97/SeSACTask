@@ -15,6 +15,10 @@
 		FE2B691B271516B700A6C76D /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2B691A271516B700A6C76D /* MemoTableViewController.swift */; };
 		FE2B691D271561CD00A6C76D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2B691C271561CD00A6C76D /* SettingTableViewController.swift */; };
 		FE2B691F2715BF1500A6C76D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2B691E2715BF1500A6C76D /* ViewController.swift */; };
+		FE67CD182717ADAA006F6371 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD172717ADAA006F6371 /* Movie.swift */; };
+		FE67CD1A2717AEEF006F6371 /* MovieInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD192717AEEF006F6371 /* MovieInformation.swift */; };
+		FE67CD1C2717B599006F6371 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD1B2717B599006F6371 /* Memo.swift */; };
+		FE67CD1E2717D2DE006F6371 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD1D2717D2DE006F6371 /* UIViewController+Extension.swift */; };
 		FEBE442227165DCD00F43E33 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE442127165DCD00F43E33 /* MovieTableViewController.swift */; };
 		FEBE442427165EA800F43E33 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE442327165EA800F43E33 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +34,10 @@
 		FE2B691A271516B700A6C76D /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
 		FE2B691C271561CD00A6C76D /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		FE2B691E2715BF1500A6C76D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE67CD172717ADAA006F6371 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FE67CD192717AEEF006F6371 /* MovieInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInformation.swift; sourceTree = "<group>"; };
+		FE67CD1B2717B599006F6371 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		FE67CD1D2717D2DE006F6371 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FEBE442127165DCD00F43E33 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 		FEBE442327165EA800F43E33 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,17 +72,21 @@
 		FE2B690527150A9400A6C76D /* SeSac_03week */ = {
 			isa = PBXGroup;
 			children = (
+				FE67CD1D2717D2DE006F6371 /* UIViewController+Extension.swift */,
 				FE2B690627150A9400A6C76D /* AppDelegate.swift */,
 				FE2B690827150A9400A6C76D /* SceneDelegate.swift */,
 				FE2B691E2715BF1500A6C76D /* ViewController.swift */,
 				FE2B690C27150A9400A6C76D /* Main.storyboard */,
+				FE67CD1B2717B599006F6371 /* Memo.swift */,
 				FEBE442327165EA800F43E33 /* MovieTableViewCell.swift */,
 				FEBE442127165DCD00F43E33 /* MovieTableViewController.swift */,
+				FE67CD192717AEEF006F6371 /* MovieInformation.swift */,
 				FE2B691C271561CD00A6C76D /* SettingTableViewController.swift */,
 				FE2B691A271516B700A6C76D /* MemoTableViewController.swift */,
 				FE2B690F27150A9600A6C76D /* Assets.xcassets */,
 				FE2B691127150A9600A6C76D /* LaunchScreen.storyboard */,
 				FE2B691427150A9600A6C76D /* Info.plist */,
+				FE67CD172717ADAA006F6371 /* Movie.swift */,
 			);
 			path = SeSac_03week;
 			sourceTree = "<group>";
@@ -151,12 +163,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2B691F2715BF1500A6C76D /* ViewController.swift in Sources */,
+				FE67CD1E2717D2DE006F6371 /* UIViewController+Extension.swift in Sources */,
+				FE67CD1A2717AEEF006F6371 /* MovieInformation.swift in Sources */,
 				FE2B691B271516B700A6C76D /* MemoTableViewController.swift in Sources */,
 				FEBE442427165EA800F43E33 /* MovieTableViewCell.swift in Sources */,
 				FEBE442227165DCD00F43E33 /* MovieTableViewController.swift in Sources */,
 				FE2B690727150A9400A6C76D /* AppDelegate.swift in Sources */,
 				FE2B690927150A9400A6C76D /* SceneDelegate.swift in Sources */,
+				FE67CD182717ADAA006F6371 /* Movie.swift in Sources */,
 				FE2B691D271561CD00A6C76D /* SettingTableViewController.swift in Sources */,
+				FE67CD1C2717B599006F6371 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

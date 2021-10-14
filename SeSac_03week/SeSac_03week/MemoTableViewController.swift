@@ -9,29 +9,76 @@ import UIKit
 
 class MemoTableViewController: UITableViewController {
 	
-	var list: [String] = ["장보기","메모메모","영화보러가기","WWDC 시청하기"] {
+	var list = [Memo]() {
 		didSet {
-			tableView.reloadData()
+			saveData()
 		}
 	}
 	
+//	var list: [Memo] = [] {
+//		didSet {
+//			tableView.reloadData()
+//		}
+//	}
+	
+	@IBOutlet weak var categorySegmentedControl: UISegmentedControl!
 	@IBOutlet weak var memoTextView: UITextView!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
+		//자동 높이계산
+//		UITableView.automaticDimension
+        loadData()
     }
 	
 	@IBAction func saveButtonClicked(_ sender: UIButton) {
 		//배열에 텍스트뷰의 텍스트 값 추가
 		if let text = memoTextView.text {
-			list.append(text)
+			
+			let segmentIndex = categorySegmentedControl.selectedSegmentIndex
+			
+			let segmentCategory = Category(rawValue: segmentIndex) ?? .others
+			
+			let memo = Memo(content: text, category: segmentCategory)
+			
+			
+			list.append(memo)
 //			tableView.reloadData()
-			print(list)
+
 		} else {
-			print("")
+			print("ERROR")
 		}
+	}
+	
+	func loadData() {
+		let userDefaults = UserDefaults.standard
+		if let data = userDefaults.object(forKey: "memoList") as? [[String:Any]] {
+			var memo = [Memo]()
+			for datum in data {
+				guard let category = datum["category"] as? Int else { return }
+				guard let content = datum["content"] as? String else { return }
+				
+				let enumCategory = Category(rawValue: category) ?? .others
+				memo.append(Memo(content: content, category: enumCategory))
+			}
+			self.list = memo
+		}
+	}
+	
+	func saveData() {
+		var memo: [[String: Any]] = []
 		
+		for i in list {
+			let data: [String:Any] = [
+				"category": i.category.rawValue,
+				"content": i.content
+			]
+			memo.append(data)
+		}
+		let userDefaults = UserDefaults.standard
+		userDefaults.set(memo, forKey: "memoList")
+		
+		tableView.reloadData()
 	}
 	//옵션: 섹션의 수: numberOfSections = default : 1
 	override func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,11 +115,14 @@ class MemoTableViewController: UITableViewController {
 //		}
 		
 		if indexPath.section == 0{
-			
-			cell.textLabel?.text = "셀입니다. -\(indexPath)"
+			cell.textLabel?.text = "첫번째 섹션입니다. -\(indexPath)"
 			cell.textLabel?.textColor = .brown
 			cell.textLabel?.font = .boldSystemFont(ofSize: 15)
+			cell.imageView?.image = nil
+			cell.detailTextLabel?.text = nil
 		} else {
+			
+			let row = list[indexPath.row]
 //			if indexPath.row == 0{
 //				cell?.textLabel?.text = list[0]
 //			} else if indexPath.row == 1 {
@@ -84,9 +134,20 @@ class MemoTableViewController: UITableViewController {
 //			} else {
 //				cell?.textLabel?.text = "데이터 없음"
 //			}
-			cell.textLabel?.text = list[indexPath.row]
+			cell.textLabel?.text = row.content
+			cell.detailTextLabel?.text = row.category.description
 			cell.textLabel?.textColor = .blue
-			cell.textLabel?.font = .italicSystemFont(ofSize: 15)
+			cell.textLabel?.font = .italicSystemFont(ofSize: 13)
+			
+			switch row.category {
+			case .business:
+				cell.imageView?.image = UIImage(systemName: "building.2")
+			case .personal:
+				cell.imageView?.image = UIImage(systemName: "star")
+			case .others:
+				cell.imageView?.image = UIImage(systemName: "star.fill")
+			}
+			cell.imageView?.tintColor = .red
 		}
 		return cell
 	}
