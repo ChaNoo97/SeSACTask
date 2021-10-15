@@ -90,7 +90,7 @@
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
-                                                <action selector="CheckButtonClicked:" destination="zJp-LF-3tL" eventType="touchUpInside" id="Pxs-Ot-nND"/>
+                                                <action selector="CheckButtonClicked:" destination="znZ-pP-ESU" eventType="touchUpInside" id="zdg-kV-Hb2"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7I-Lr-f8g">
@@ -103,7 +103,7 @@
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
-                                                <action selector="BookmarkButtonClicked:" destination="zJp-LF-3tL" eventType="touchUpInside" id="Xmq-Uv-Zsk"/>
+                                                <action selector="BookmarkButtonClicked:" destination="znZ-pP-ESU" eventType="touchUpInside" id="Xqh-60-Pxu"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ome-Wb-Wd8">

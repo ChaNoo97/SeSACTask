@@ -14,6 +14,12 @@ class ShoppinglistTableViewCell: UITableViewCell {
 	@IBOutlet weak var BookmarkButton: UIButton!
 	@IBOutlet weak var ContentLabel: UILabel!
 	
+	var image1 = UIImage(systemName: "star")
+	var image2 = UIImage(systemName: "checkmark.square")
+	var image3 = UIImage(systemName: "star.fill")
+	var image4 = UIImage(systemName: "checkmark.square.fill")
+	
+	
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +30,10 @@ class ShoppinglistTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+	@IBAction func CheckButtonClicked(_ sender: UIButton) {
+		
+	}
+	@IBAction func BookmarkButtonClicked(_ sender: UIButton) {
+	}
+	
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE67CD20271811F1006F6371 /* shoppinglist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD1F271811F1006F6371 /* shoppinglist.swift */; };
 		FEA32E0E2716CF900090160D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA32E0D2716CF900090160D /* AppDelegate.swift */; };
 		FEA32E102716CF900090160D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA32E0F2716CF900090160D /* SceneDelegate.swift */; };
 		FEA32E122716CF900090160D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA32E112716CF900090160D /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE67CD1F271811F1006F6371 /* shoppinglist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppinglist.swift; sourceTree = "<group>"; };
 		FEA32E0A2716CF900090160D /* Shoppinglist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoppinglist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA32E0D2716CF900090160D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEA32E0F2716CF900090160D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		FEA32E0C2716CF900090160D /* Shoppinglist */ = {
 			isa = PBXGroup;
 			children = (
+				FE67CD1F271811F1006F6371 /* shoppinglist.swift */,
 				FEA32E0D2716CF900090160D /* AppDelegate.swift */,
 				FEA32E0F2716CF900090160D /* SceneDelegate.swift */,
 				FEA32E112716CF900090160D /* ViewController.swift */,
@@ -147,6 +150,7 @@
 				FEA32E122716CF900090160D /* ViewController.swift in Sources */,
 				FEA32E0E2716CF900090160D /* AppDelegate.swift in Sources */,
 				FEA32E102716CF900090160D /* SceneDelegate.swift in Sources */,
+				FE67CD20271811F1006F6371 /* shoppinglist.swift in Sources */,
 				FEA32E2A2716F7A20090160D /* ShoppinglistTableViewCell.swift in Sources */,
 				FEA32E282716F7490090160D /* ShoppinglistTableViewController.swift in Sources */,
 			);
