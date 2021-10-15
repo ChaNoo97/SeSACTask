@@ -28,20 +28,21 @@ class MemoTableViewController: UITableViewController {
         super.viewDidLoad()
 		//자동 높이계산
 //		UITableView.automaticDimension
+		
+		navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closedButtonClicke))
+		
         loadData()
     }
+	@objc func closedButtonClicke(){
+		self.dismiss(animated: true, completion: nil)
+	}
 	
 	@IBAction func saveButtonClicked(_ sender: UIButton) {
 		//배열에 텍스트뷰의 텍스트 값 추가
 		if let text = memoTextView.text {
-			
 			let segmentIndex = categorySegmentedControl.selectedSegmentIndex
-			
 			let segmentCategory = Category(rawValue: segmentIndex) ?? .others
-			
 			let memo = Memo(content: text, category: segmentCategory)
-			
-			
 			list.append(memo)
 //			tableView.reloadData()
 
@@ -54,6 +55,7 @@ class MemoTableViewController: UITableViewController {
 		let userDefaults = UserDefaults.standard
 		if let data = userDefaults.object(forKey: "memoList") as? [[String:Any]] {
 			var memo = [Memo]()
+			
 			for datum in data {
 				guard let category = datum["category"] as? Int else { return }
 				guard let content = datum["content"] as? String else { return }
@@ -61,6 +63,7 @@ class MemoTableViewController: UITableViewController {
 				let enumCategory = Category(rawValue: category) ?? .others
 				memo.append(Memo(content: content, category: enumCategory))
 			}
+			print(self)
 			self.list = memo
 		}
 	}
@@ -74,10 +77,11 @@ class MemoTableViewController: UITableViewController {
 				"content": i.content
 			]
 			memo.append(data)
+			print(memo)
 		}
 		let userDefaults = UserDefaults.standard
 		userDefaults.set(memo, forKey: "memoList")
-		
+
 		tableView.reloadData()
 	}
 	//옵션: 섹션의 수: numberOfSections = default : 1
@@ -121,7 +125,7 @@ class MemoTableViewController: UITableViewController {
 			cell.imageView?.image = nil
 			cell.detailTextLabel?.text = nil
 		} else {
-			
+			print(list)
 			let row = list[indexPath.row]
 //			if indexPath.row == 0{
 //				cell?.textLabel?.text = list[0]
@@ -155,6 +159,10 @@ class MemoTableViewController: UITableViewController {
 	//(옵션) 셀을 클릭했을 때 기능
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		print("셀 선택")
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "TestViewController") as! TestViewController
+		// someVC --push--> navVC 는 안됨 이럴땐 present
+//		let nav = UINavigationController(rootViewController: vc)
+		navigationController?.pushViewController(vc, animated: true)
 	}
 	
 	//3. (옵션 이지만 거의 필수)셀의 높이 : heightForRowAt
@@ -163,7 +171,7 @@ class MemoTableViewController: UITableViewController {
 		return indexPath.row == 0 ? 44 : 80
 	}
 	
-	//(옵션) 셀 스와이프 on/off
+	//(옵션) 셀 스와이프 on/off : canEditRowAt
 	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 		return indexPath.section == 0 ? false : true
 	}

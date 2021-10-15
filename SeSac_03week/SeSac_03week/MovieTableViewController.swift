@@ -13,8 +13,16 @@ class MovieTableViewController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "닫기", style: .plain, target: self, action: #selector(closeButtonClicked))
     }
+	@objc func closeButtonClicked() {
+		
+		//Push - Pop
+		//Push: Dismiss X , Present: Pop X
+//		self.navigationController?.popViewController(animated: true)
+		self.navigationController?.dismiss(animated: true, completion: nil)
+		
+	}
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return movieInformation.movie.count
@@ -41,5 +49,15 @@ class MovieTableViewController: UITableViewController {
 		//기기마다 스크린크기에 대응
 		return UIScreen.main.bounds.height / 5
 	}
-
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let sb = UIStoryboard(name: "Movie", bundle: nil)
+		
+		guard let vc = sb.instantiateViewController(withIdentifier: "MovieDetailViewController") as? MovieDetailViewController else {
+			print("Error")
+			return
+		}
+		
+		self.navigationController?.pushViewController(vc, animated: true)
+	}
 }

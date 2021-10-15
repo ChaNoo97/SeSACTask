@@ -27,3 +27,6 @@ struct Memo {
 	var content: String
 	var category: Category
 }
+
+
+
