@@ -45,8 +45,16 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true, completion: nil)
 		
+	}
+	
+	@IBAction func thirdButtonClicked(_ sender: UIButton) {
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "VideoCollectionViewController") as! VideoCollectionViewController
+		
+		navigationController?.pushViewController(vc, animated: true)
 		
 	}
+	
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return mainTvShow.tvShow.count
 	}

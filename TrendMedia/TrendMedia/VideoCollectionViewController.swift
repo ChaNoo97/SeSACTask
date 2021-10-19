@@ -51,10 +51,15 @@ extension VideoCollectionViewController: UICollectionViewDelegate,UICollectionVi
 		let data = try? Data(contentsOf: url!)
 		
 		cell.titleLabel.text = item.title
+		cell.titleLabel.textColor = .white
+		cell.titleLabel.font = .boldSystemFont(ofSize: 20)
 		cell.rateLabel.text = "\(item.rate)"
+		cell.rateLabel.textColor = .white
+		cell.rateLabel.font = .systemFont(ofSize: 15)
 		cell.posterImage.image = UIImage(data: data!)
 		cell.posterImage.contentMode = .scaleAspectFill
 		cell.backgroundColor = .systemMint
+		cell.layer.cornerRadius = 10
 		
 		return cell
 		
