@@ -11,6 +11,7 @@ class CastTableViewCell: UITableViewCell {
 	
 	static let identifier = "CastTableViewCell"
 	@IBOutlet weak var castLabel: UILabel!
+
 	
 	override func awakeFromNib() {
         super.awakeFromNib()

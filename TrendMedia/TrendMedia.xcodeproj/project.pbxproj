@@ -13,6 +13,9 @@
 		FE67CD4327198365006F6371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE67CD4127198365006F6371 /* Main.storyboard */; };
 		FE67CD4527198367006F6371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE67CD4427198367006F6371 /* Assets.xcassets */; };
 		FE67CD4827198367006F6371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE67CD4627198367006F6371 /* LaunchScreen.storyboard */; };
+		FEF496BA271E991F00240EA0 /* VideoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF496B9271E991F00240EA0 /* VideoCollectionViewController.swift */; };
+		FEF496C3271E9CD200240EA0 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF496C1271E9CD200240EA0 /* VideoCollectionViewCell.swift */; };
+		FEF496C4271E9CD200240EA0 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF496C2271E9CD200240EA0 /* VideoCollectionViewCell.xib */; };
 		FEF6090D271BF1B500B0D21A /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6090C271BF1B500B0D21A /* Sample.swift */; };
 		FEF6090F271C011A00B0D21A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6090E271C011A00B0D21A /* MainViewController.swift */; };
 		FEF60911271C026400B0D21A /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF60910271C026400B0D21A /* MainTableViewCell.swift */; };
@@ -33,6 +36,9 @@
 		FE67CD4427198367006F6371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE67CD4727198367006F6371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE67CD4927198367006F6371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF496B9271E991F00240EA0 /* VideoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewController.swift; sourceTree = "<group>"; };
+		FEF496C1271E9CD200240EA0 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FEF496C2271E9CD200240EA0 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		FEF6090C271BF1B500B0D21A /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sample.swift; path = "../../../../Desktop/SSAC강의자료/SeSAC_iOS_013/Sample.swift"; sourceTree = "<group>"; };
 		FEF6090E271C011A00B0D21A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FEF60910271C026400B0D21A /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,6 +86,9 @@
 				FEF6090C271BF1B500B0D21A /* Sample.swift */,
 				FEF6091A271C5B6700B0D21A /* TvShow.swift */,
 				FE67CD4127198365006F6371 /* Main.storyboard */,
+				FEF496B9271E991F00240EA0 /* VideoCollectionViewController.swift */,
+				FEF496C1271E9CD200240EA0 /* VideoCollectionViewCell.swift */,
+				FEF496C2271E9CD200240EA0 /* VideoCollectionViewCell.xib */,
 				FEF60916271C436000B0D21A /* CastViewController.swift */,
 				FEF6091C271C7CFB00B0D21A /* CastTableViewCell.swift */,
 				FEF60914271C435100B0D21A /* SearchViewController.swift */,
@@ -154,6 +163,7 @@
 			files = (
 				FE67CD4827198367006F6371 /* LaunchScreen.storyboard in Resources */,
 				FE67CD4527198367006F6371 /* Assets.xcassets in Resources */,
+				FEF496C4271E9CD200240EA0 /* VideoCollectionViewCell.xib in Resources */,
 				FE67CD4327198365006F6371 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF496C3271E9CD200240EA0 /* VideoCollectionViewCell.swift in Sources */,
+				FEF496BA271E991F00240EA0 /* VideoCollectionViewController.swift in Sources */,
 				FE67CD4027198365006F6371 /* ViewController.swift in Sources */,
 				FEF60913271C32AB00B0D21A /* Design.swift in Sources */,
 				FEF6091B271C5B6700B0D21A /* TvShow.swift in Sources */,

@@ -7,7 +7,34 @@
 
 import UIKit
 
-class CastViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class CastViewController: UIViewController {
+	
+	var castUrl: String?
+	var titleText: String? 
+	
+
+	@IBOutlet weak var castTableView: UITableView!
+	
+	@IBOutlet weak var castImage: UIImageView!
+	let castTvShow = tvshowList()
+	
+    override func viewDidLoad() {
+        super.viewDidLoad()
+		castTableView.delegate = self
+		castTableView.dataSource = self
+		
+		title = titleText ?? "타이틀"
+		
+		let data = URL(string: castUrl!)
+		let imageUrl = try?Data(contentsOf: data!)
+		castImage.image = UIImage(data: imageUrl!)
+    }
+	
+    
+}
+
+extension CastViewController:  UITableViewDelegate,UITableViewDataSource {
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 10
 	}
@@ -21,19 +48,4 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
 		return cell
 	}
 	
-	
-	
-	@IBOutlet weak var castTableView: UITableView!
-	
-	let castTvShow = tvshowList()
-	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		
-		castTableView.delegate = self
-		castTableView.dataSource = self
-    }
-	
-    
 }
-

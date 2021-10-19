@@ -21,7 +21,6 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 	
 	@IBOutlet weak var mainTableView: UITableView!
 	
-	let image1 = UIImage(named:"squid_game.png")
 	let mainTvShow = tvshowList()
 	
 	override func viewDidLoad() {
@@ -36,11 +35,11 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 		buttonView.layer.cornerRadius = 10
 		buttonDesign(btn: firstButton, systemimagename: "film", color: .green)
 		buttonDesign(btn: secondButton, systemimagename: "tv", color: .orange)
-		buttonDesign(btn: thirdButton, systemimagename: "book.closed", color: .blue)
+		buttonDesign(btn: thirdButton, systemimagename: "book.closed", color: .blue)		
 		mainTableView.delegate = self
 		mainTableView.dataSource = self
 	}
-	
+
 	@IBAction func leftButtonClicked(_ sender: Any) {
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
 		vc.modalPresentationStyle = .fullScreen
@@ -79,13 +78,21 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "CastViewController") as! CastViewController
+		let row = mainTvShow.tvShow[indexPath.row]
+		
+		vc.titleText = row.korTitle
+		vc.castUrl = row.backdropImage
+		
 		navigationController?.pushViewController(vc, animated: true)
+		
+		
 	}
 	
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 350
 	}
+	
 	
 
     

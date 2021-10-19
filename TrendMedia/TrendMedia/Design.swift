@@ -8,10 +8,14 @@
 import Foundation
 import UIKit
 extension UIViewController {
+	
 	func buttonDesign(btn:UIButton,systemimagename name: String, color: UIColor){
-		btn.setImage(UIImage(systemName: name), for: .normal)
+		let config = UIImage.SymbolConfiguration(pointSize: 50)
+		let image = UIImage(systemName: name)!.withConfiguration(config)
+		btn.setImage(image, for: .normal)
 		btn.tintColor = color
 	}
+	
 	func titleDesign(lbl:UILabel,text:String,font: UIFont){
 		lbl.text = text
 		lbl.textColor = .black
