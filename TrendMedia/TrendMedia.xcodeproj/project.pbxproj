@@ -10,6 +10,7 @@
 		FE223574271F213100EDE4E3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE223573271F213100EDE4E3 /* TestViewController.swift */; };
 		FE223579271F21D500EDE4E3 /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE223577271F21D500EDE4E3 /* TestCollectionViewCell.swift */; };
 		FE22357A271F21D500EDE4E3 /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE223578271F21D500EDE4E3 /* TestCollectionViewCell.xib */; };
+		FE223580271FE6E300EDE4E3 /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22357F271FE6E300EDE4E3 /* SummaryTableViewCell.swift */; };
 		FE67CD3C27198365006F6371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD3B27198365006F6371 /* AppDelegate.swift */; };
 		FE67CD3E27198365006F6371 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD3D27198365006F6371 /* SceneDelegate.swift */; };
 		FE67CD4027198365006F6371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD3F27198365006F6371 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		FE223573271F213100EDE4E3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		FE223577271F21D500EDE4E3 /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE223578271F21D500EDE4E3 /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
+		FE22357F271FE6E300EDE4E3 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		FE67CD3827198365006F6371 /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE67CD3B27198365006F6371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE67CD3D27198365006F6371 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				FEF496C2271E9CD200240EA0 /* VideoCollectionViewCell.xib */,
 				FEF60916271C436000B0D21A /* CastViewController.swift */,
 				FEF6091C271C7CFB00B0D21A /* CastTableViewCell.swift */,
+				FE22357F271FE6E300EDE4E3 /* SummaryTableViewCell.swift */,
 				FEF60914271C435100B0D21A /* SearchViewController.swift */,
 				FEF60918271C4D7100B0D21A /* SearchTableViewCell.swift */,
 				FEF6090E271C011A00B0D21A /* MainViewController.swift */,
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF496C3271E9CD200240EA0 /* VideoCollectionViewCell.swift in Sources */,
+				FE223580271FE6E300EDE4E3 /* SummaryTableViewCell.swift in Sources */,
 				FEF496BA271E991F00240EA0 /* VideoCollectionViewController.swift in Sources */,
 				FE67CD4027198365006F6371 /* ViewController.swift in Sources */,
 				FEF60913271C32AB00B0D21A /* Design.swift in Sources */,
