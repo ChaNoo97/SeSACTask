@@ -38,13 +38,13 @@ class FindCinemaViewController: UIViewController {
 //		mapView.removeAnnotations(mapView.annotations)
 		let actionSheet = UIAlertController(title: "영화관 선택", message: "영화관을 선택하세요", preferredStyle: .actionSheet)
 		let selectCGV = UIAlertAction(title: "CGV", style: .default) { action in
-			self.showCGVAnnotatio()
+			self.showSelectCinema(choose: 1)
 		}
 		let selectMEGABOX = UIAlertAction(title: "메가박스", style: .default) { action in
-			self.showMEGABOXAnnotation()
+			self.showSelectCinema(choose: 2)
 		}
 		let selectLOTTE = UIAlertAction(title: "롯데시네마", style: .default) { action in
-			self.showLotteAnnotation()
+			self.showSelectCinema(choose: 3)
 		}
 		let selectAll = UIAlertAction(title: "전체보기", style: .cancel) { action in
 			self.mapView.removeAnnotations(self.mapView.annotations)
@@ -70,40 +70,31 @@ class FindCinemaViewController: UIViewController {
 		}
 	
 	}
-	
-	func showCGVAnnotatio() {
+	func showSelectCinema(choose: Int) {
 		mapView.removeAnnotations(mapView.annotations)
 		for data in theaterinfo.mapAnnotations {
-			if data.type == "CGV" {
-				let annotation = MKPointAnnotation()
-				let location = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
-				annotation.title = data.location
-				annotation.coordinate = location
-				mapView.addAnnotation(annotation)
-			}
-		}
-	}
-	func showMEGABOXAnnotation() {
-		mapView.removeAnnotations(mapView.annotations)
-		for data in theaterinfo.mapAnnotations {
-			if data.type == "메가박스" {
-				let annotation = MKPointAnnotation()
-				let location = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
-				annotation.title = data.location
-				annotation.coordinate = location
-				mapView.addAnnotation(annotation)
-			}
-		}
-	}
-	func showLotteAnnotation() {
-		mapView.removeAnnotations(mapView.annotations)
-		for data in theaterinfo.mapAnnotations {
-			if data.type == "롯데시네마" {
-				let annotation = MKPointAnnotation()
-				let location = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
-				annotation.title = data.location
-				annotation.coordinate = location
-				mapView.addAnnotation(annotation)
+			let annotation = MKPointAnnotation()
+			if choose == 1 {
+				if data.type == "CGV" {
+					let location = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
+					annotation.title = data.location
+					annotation.coordinate = location
+					mapView.addAnnotation(annotation)
+				}
+			} else if choose == 2 {
+				if data.type == "메가박스" {
+					let location = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
+					annotation.title = data.location
+					annotation.coordinate = location
+					mapView.addAnnotation(annotation)
+				}
+			} else {
+				if data.type == "롯데시네마" {
+					let location = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
+					annotation.title = data.location
+					annotation.coordinate = location
+					mapView.addAnnotation(annotation)
+				}
 			}
 		}
 	}
@@ -118,8 +109,6 @@ class FindCinemaViewController: UIViewController {
 		}
 	}
 	
-
-
 }
 extension FindCinemaViewController: MKMapViewDelegate {
 	//어노테이션 클릭시 이벤트 핸들링
