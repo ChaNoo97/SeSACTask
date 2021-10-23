@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 	
+	@IBOutlet weak var findCinemaButton: UIBarButtonItem!
 	@IBOutlet weak var leftButton: UIBarButtonItem!
 	
 	@IBOutlet weak var topView: UIView!
@@ -26,6 +27,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// navitem right button 추후 구현
+		navigationItem.backButtonTitle = ""
 		navigationItem.title = "TREND MEDIA"
 		topView.backgroundColor = .systemIndigo
 		titleDesign(lbl: titleLabel, text: "OH HOO!", font: .boldSystemFont(ofSize: 40))
@@ -40,6 +42,11 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 		mainTableView.dataSource = self
 	}
 
+	@IBAction func findCinemaButtonClicked(_ sender: UIBarButtonItem) {
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "FindCinemaViewController") as! FindCinemaViewController
+		navigationController?.pushViewController(vc, animated: true)
+	}
+	
 	@IBAction func leftButtonClicked(_ sender: Any) {
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
 		vc.modalPresentationStyle = .fullScreen

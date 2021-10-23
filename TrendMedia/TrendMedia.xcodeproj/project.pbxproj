@@ -11,12 +11,15 @@
 		FE223579271F21D500EDE4E3 /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE223577271F21D500EDE4E3 /* TestCollectionViewCell.swift */; };
 		FE22357A271F21D500EDE4E3 /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE223578271F21D500EDE4E3 /* TestCollectionViewCell.xib */; };
 		FE223580271FE6E300EDE4E3 /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22357F271FE6E300EDE4E3 /* SummaryTableViewCell.swift */; };
+		FE223587271FFB6900EDE4E3 /* FindCinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE223586271FFB6900EDE4E3 /* FindCinemaViewController.swift */; };
 		FE67CD3C27198365006F6371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD3B27198365006F6371 /* AppDelegate.swift */; };
 		FE67CD3E27198365006F6371 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD3D27198365006F6371 /* SceneDelegate.swift */; };
 		FE67CD4027198365006F6371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67CD3F27198365006F6371 /* ViewController.swift */; };
 		FE67CD4327198365006F6371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE67CD4127198365006F6371 /* Main.storyboard */; };
 		FE67CD4527198367006F6371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE67CD4427198367006F6371 /* Assets.xcassets */; };
 		FE67CD4827198367006F6371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE67CD4627198367006F6371 /* LaunchScreen.storyboard */; };
+		FEEA0BA1272317AA00E59BC7 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEA0BA0272317AA00E59BC7 /* Theater.swift */; };
+		FEEA0BA3272318CF00E59BC7 /* TheaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEA0BA2272318CF00E59BC7 /* TheaterData.swift */; };
 		FEF496BA271E991F00240EA0 /* VideoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF496B9271E991F00240EA0 /* VideoCollectionViewController.swift */; };
 		FEF496C3271E9CD200240EA0 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF496C1271E9CD200240EA0 /* VideoCollectionViewCell.swift */; };
 		FEF496C4271E9CD200240EA0 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF496C2271E9CD200240EA0 /* VideoCollectionViewCell.xib */; };
@@ -36,6 +39,7 @@
 		FE223577271F21D500EDE4E3 /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE223578271F21D500EDE4E3 /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE22357F271FE6E300EDE4E3 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
+		FE223586271FFB6900EDE4E3 /* FindCinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCinemaViewController.swift; sourceTree = "<group>"; };
 		FE67CD3827198365006F6371 /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE67CD3B27198365006F6371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE67CD3D27198365006F6371 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		FE67CD4427198367006F6371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE67CD4727198367006F6371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE67CD4927198367006F6371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEEA0BA0272317AA00E59BC7 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		FEEA0BA2272318CF00E59BC7 /* TheaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterData.swift; sourceTree = "<group>"; };
 		FEF496B9271E991F00240EA0 /* VideoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewController.swift; sourceTree = "<group>"; };
 		FEF496C1271E9CD200240EA0 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		FEF496C2271E9CD200240EA0 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 				FEF6090C271BF1B500B0D21A /* Sample.swift */,
 				FEF6091A271C5B6700B0D21A /* TvShow.swift */,
 				FE67CD4127198365006F6371 /* Main.storyboard */,
+				FEEA0BA0272317AA00E59BC7 /* Theater.swift */,
+				FEEA0BA2272318CF00E59BC7 /* TheaterData.swift */,
+				FE223586271FFB6900EDE4E3 /* FindCinemaViewController.swift */,
 				FEF496B9271E991F00240EA0 /* VideoCollectionViewController.swift */,
 				FEF496C1271E9CD200240EA0 /* VideoCollectionViewCell.swift */,
 				FEF496C2271E9CD200240EA0 /* VideoCollectionViewCell.xib */,
@@ -188,14 +197,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEA0BA1272317AA00E59BC7 /* Theater.swift in Sources */,
 				FEF496C3271E9CD200240EA0 /* VideoCollectionViewCell.swift in Sources */,
 				FE223580271FE6E300EDE4E3 /* SummaryTableViewCell.swift in Sources */,
+				FE223587271FFB6900EDE4E3 /* FindCinemaViewController.swift in Sources */,
 				FEF496BA271E991F00240EA0 /* VideoCollectionViewController.swift in Sources */,
 				FE67CD4027198365006F6371 /* ViewController.swift in Sources */,
 				FEF60913271C32AB00B0D21A /* Design.swift in Sources */,
 				FEF6091B271C5B6700B0D21A /* TvShow.swift in Sources */,
 				FEF60915271C435100B0D21A /* SearchViewController.swift in Sources */,
 				FEF6090D271BF1B500B0D21A /* Sample.swift in Sources */,
+				FEEA0BA3272318CF00E59BC7 /* TheaterData.swift in Sources */,
 				FE67CD3C27198365006F6371 /* AppDelegate.swift in Sources */,
 				FEF60917271C436000B0D21A /* CastViewController.swift in Sources */,
 				FE67CD3E27198365006F6371 /* SceneDelegate.swift in Sources */,
