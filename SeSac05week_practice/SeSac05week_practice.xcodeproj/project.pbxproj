@@ -10,6 +10,7 @@
 		FE9C56102727F04C00A97C7C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FE9C560F2727F04C00A97C7C /* Alamofire */; };
 		FE9C56132727F05A00A97C7C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FE9C56122727F05A00A97C7C /* SwiftyJSON */; };
 		FE9C56292728607000A97C7C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FE9C56282728607000A97C7C /* Kingfisher */; };
+		FE9C562B2728699900A97C7C /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9C562A2728699900A97C7C /* LotteryViewController.swift */; };
 		FEC2DF782726864C00384838 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2DF772726864C00384838 /* AppDelegate.swift */; };
 		FEC2DF7A2726864C00384838 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2DF792726864C00384838 /* SceneDelegate.swift */; };
 		FEC2DF7C2726864C00384838 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2DF7B2726864C00384838 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE9C562A2728699900A97C7C /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 		FEC2DF742726864C00384838 /* SeSac05week_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSac05week_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC2DF772726864C00384838 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEC2DF792726864C00384838 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				FEC2DF792726864C00384838 /* SceneDelegate.swift */,
 				FEC2DF7B2726864C00384838 /* ViewController.swift */,
 				FEC2DF7D2726864C00384838 /* Main.storyboard */,
+				FE9C562A2728699900A97C7C /* LotteryViewController.swift */,
 				FEC2DF8B272686EC00384838 /* WeatherViewController.swift */,
 				FEC2DF802726864E00384838 /* Assets.xcassets */,
 				FEC2DF822726864E00384838 /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 				FEC2DF8C272686EC00384838 /* WeatherViewController.swift in Sources */,
 				FEC2DF782726864C00384838 /* AppDelegate.swift in Sources */,
 				FEC2DF7A2726864C00384838 /* SceneDelegate.swift in Sources */,
+				FE9C562B2728699900A97C7C /* LotteryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
