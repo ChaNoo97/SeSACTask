@@ -119,33 +119,52 @@ class WeatherViewController: UIViewController {
 	}
 	
 	func getCurrentWeather() {
-		let url = "https://api.openweathermap.org/data/2.5/weather?lat=\(currentLat)&lon=\(currentLong)&appid=eee90f108f2fc83f5e8de93edeb85d64"
+//		let url = "https://api.openweathermap.org/data/2.5/weather?lat=\(currentLat)&lon=\(currentLong)&appid=eee90f108f2fc83f5e8de93edeb85d64"
 		
-		AF.request(url, method: .get).validate().responseJSON { response in
-			switch response.result {
-			case .success(let value):
-				let json = JSON(value)
-				print("JSON: \(json)")
-				
-				let currentTemp = json["main"]["temp"].doubleValue - 273.15
-				self.temperatureLabel.text = " 현재온도는 \(Int(currentTemp))ºc 입니다. "
-				
-				let currentHumdity = json["main"]["humidity"].doubleValue
-				self.humidityLabel.text = " 습도는 \(Int(currentHumdity))% 입니다. "
-				
-				let currentWindDeg = Int(json["main"]["deg"].doubleValue)
-				let currentWindSpeed = json["main"]["speed"].doubleValue
-				let winddirec = self.windDeg(deg: currentWindDeg)
-				self.windLabel.text = " 풍향은 \(winddirec) 풍속은 \(currentWindSpeed)m/s 입니다. "
-				
-				let icon = json["weather"][0]["icon"].stringValue
-				let url = URL(string: "http://openweathermap.org/img/wn/\(icon)@2x.png")
-				self.weatherImageView.kf.setImage(with: url)
-				
-			case .failure(let error):
-				print(error)
-			}
+		WeatherAPIManager.shard.fetchWeatherData(lat: currentLat, long: currentLong, id: APIkey.weatherID) { json in
+			
+			let currentTemp = json["main"]["temp"].doubleValue - 273.15
+			self.temperatureLabel.text = " 현재온도는 \(Int(currentTemp))ºc 입니다. "
+			
+			let currentHumdity = json["main"]["humidity"].doubleValue
+			self.humidityLabel.text = " 습도는 \(Int(currentHumdity))% 입니다. "
+			
+			let currentWindDeg = Int(json["main"]["deg"].doubleValue)
+			let currentWindSpeed = json["main"]["speed"].doubleValue
+			let winddirec = self.windDeg(deg: currentWindDeg)
+			self.windLabel.text = " 풍향은 \(winddirec) 풍속은 \(currentWindSpeed)m/s 입니다. "
+			
+			let icon = json["weather"][0]["icon"].stringValue
+			let url = URL(string: "http://openweathermap.org/img/wn/\(icon)@2x.png")
+			self.weatherImageView.kf.setImage(with: url)
+			
 		}
+		
+//		AF.request(url, method: .get).validate().responseJSON { response in
+//			switch response.result {
+//			case .success(let value):
+//				let json = JSON(value)
+//				print("JSON: \(json)")
+//
+//				let currentTemp = json["main"]["temp"].doubleValue - 273.15
+//				self.temperatureLabel.text = " 현재온도는 \(Int(currentTemp))ºc 입니다. "
+//
+//				let currentHumdity = json["main"]["humidity"].doubleValue
+//				self.humidityLabel.text = " 습도는 \(Int(currentHumdity))% 입니다. "
+//
+//				let currentWindDeg = Int(json["main"]["deg"].doubleValue)
+//				let currentWindSpeed = json["main"]["speed"].doubleValue
+//				let winddirec = self.windDeg(deg: currentWindDeg)
+//				self.windLabel.text = " 풍향은 \(winddirec) 풍속은 \(currentWindSpeed)m/s 입니다. "
+//
+//				let icon = json["weather"][0]["icon"].stringValue
+//				let url = URL(string: "http://openweathermap.org/img/wn/\(icon)@2x.png")
+//				self.weatherImageView.kf.setImage(with: url)
+//
+//			case .failure(let error):
+//				print(error)
+//			}
+//		}
 
 	}
 
