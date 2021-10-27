@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CastViewController: UIViewController {
 	
-	var castUrl: String?
+	var castUrl: URL?
 	var titleText: String? 
 	
 	
@@ -19,6 +20,7 @@ class CastViewController: UIViewController {
 	@IBOutlet weak var castImage: UIImageView!
 	
 	let castTvShow = tvshowList()
+	var chevronButtonStatus: Bool = true
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +29,23 @@ class CastViewController: UIViewController {
 		
 		title = titleText ?? "타이틀"
 		
-		let data = URL(string: castUrl! )
-		let imageUrl = try?Data(contentsOf: data!)
-		castImage.image = UIImage(data: imageUrl!)
+		castImage.kf.setImage(with: castUrl!)
 		castImage.contentMode = .scaleAspectFill
 		
 		castTableView.rowHeight = UITableView.automaticDimension
 		castTableView.estimatedRowHeight = 50
+		
+		
     }
 	
-    
+	@IBAction func chevronButtonClicked(_ sender: UIButton) {
+		if chevronButtonStatus == true {
+			chevronButtonStatus = false
+		} else {
+			chevronButtonStatus = true
+		}
+	}
+	
 }
 
 extension CastViewController:  UITableViewDelegate,UITableViewDataSource {
@@ -54,14 +63,21 @@ extension CastViewController:  UITableViewDelegate,UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
+		let tvshow = castTvShow.tvShow[indexPath.row]
 		
 		if indexPath.section == 0 {
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: SummaryTableViewCell.identifier, for: indexPath) as? SummaryTableViewCell else{return UITableViewCell()}
-			cell.summaryLabel.text = "가나다라마바사아자카차내가그린그림은 기린그림이다. 간장공장공장장 구누두루무부수우주쿠추고노도로모보소오조코초기니디리미비시이지키치"
-			cell.summaryLabel.numberOfLines = 0
-			
+			cell.summaryLabel.text = tvshow.overview
 			cell.addButton.setImage(UIImage(systemName: "star"), for: .normal)
+			if chevronButtonStatus == true { // up
+				cell.summaryLabel.numberOfLines = 1
+				tableView.reloadData()
 			
+			} else { //down
+				cell.summaryLabel.numberOfLines = 0
+				tableView.reloadData()
+				
+			}
 			return cell
 		} else {
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: CastTableViewCell.identifier, for: indexPath) as? CastTableViewCell else {

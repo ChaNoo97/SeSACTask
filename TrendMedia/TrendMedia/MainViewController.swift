@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Kingfisher
 
-class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITableViewDataSourcePrefetching {
 	
 	@IBOutlet weak var findCinemaButton: UIBarButtonItem!
 	@IBOutlet weak var leftButton: UIBarButtonItem!
@@ -24,8 +25,13 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 	
 	let mainTvShow = tvshowList()
 	
+	var mainMovieDate: [MovieDate] = []
+	var startPage = 1
+	var totalCount = 30
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		fetchData()
 		// navitem right button 추후 구현
 		navigationItem.backButtonTitle = ""
 		navigationItem.title = "TREND MEDIA"
@@ -40,6 +46,30 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 		buttonDesign(btn: thirdButton, systemimagename: "book.closed", color: .blue)		
 		mainTableView.delegate = self
 		mainTableView.dataSource = self
+		mainTableView.prefetchDataSource = self
+	}
+	
+	func fetchData() {
+		TMDBManager.shared.fetchTrendData(apikey: APIkey.TMDB_KEY) { json in
+			let result = json["results"]
+			for i in 0...result.count-1 {
+				let mediaType = result[i]["media_type"].stringValue
+				let backdropPath = result[i]["backdrop_path"].stringValue.replacingOccurrences(of: "", with: "" )
+				let voteAverage = result[i]["vote_average"].doubleValue
+				let title = result[i]["title"].stringValue
+				let releaseDate = result[i]["release_date"].stringValue
+				
+				let data = MovieDate(
+					media_type: mediaType,
+					backdrop_path: backdropPath,
+					vote_average: voteAverage,
+					title: title,
+					release_date: releaseDate
+				)
+				self.mainMovieDate.append(data)
+			}
+			self.mainTableView.reloadData()
+		}
 	}
 
 	@IBAction func findCinemaButtonClicked(_ sender: UIBarButtonItem) {
@@ -63,40 +93,65 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return mainTvShow.tvShow.count
+		return mainMovieDate.count
 	}
 	
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier,for: indexPath) as? MainTableViewCell else {return UITableViewCell()}
 		
-		let row = mainTvShow.tvShow[indexPath.row]
+		let row = mainMovieDate[indexPath.row]
 		
-		genreDesign(lbl: cell.genreLabel, text: row.genre, font:.systemFont(ofSize: 10))
+		if let url = URL(string: "https://image.tmdb.org/t/p/original\(row.backdrop_path)") {
+			cell.posterImageView.kf.setImage(with: url)
 		
-		titleDesign(lbl: cell.engTitleLabel, text: row.title, font: .boldSystemFont(ofSize: 30))
+		} else {
+			cell.posterImageView.image = UIImage(systemName: "star")
+		}
+			
 		
-		let url = URL(string: row.backdropImage)
-		let imageURL = try?Data(contentsOf: url!)
-		let image = UIImage(data: imageURL!)
-		posterDesign(imv: cell.posterImageView, image: image!)
+		titleDesign(lbl: cell.engTitleLabel, text: row.media_type, font: .boldSystemFont(ofSize: 20))
+		genreDesign(lbl: cell.genreLabel, text: "", font: .systemFont(ofSize: 0))
+		rateDesign(lbl: cell.rateLabel, text: "평점", font: .systemFont(ofSize: 5), backgroundColor: .orange)
+		ratenumDesign(lbl: cell.rateNumLabel, text: row.vote_average, font: .systemFont(ofSize: 5), backgroundColor: .white)
+		titleDesign(lbl: cell.korTitleLabel, text: row.title, font: .boldSystemFont(ofSize: 30))
+		genreDesign(lbl: cell.dateLabel, text: row.release_date, font: .systemFont(ofSize: 13))
 		
-		rateDesign(lbl: cell.rateLabel, text:"평점", font: .systemFont(ofSize:5), backgroundColor: .orange)
-		ratenumDesign(lbl: cell.rateNumLabel, text: row.rate, font: .systemFont(ofSize:5), backgroundColor: .white)
-		
-		titleDesign(lbl: cell.korTitleLabel, text: row.korTitle, font: .boldSystemFont(ofSize: 30))
-
-		genreDesign(lbl: cell.dateLabel, text: row.releaseDate, font: .systemFont(ofSize: 13))
+//		let row = mainTvShow.tvShow[indexPath.row]
+//
+//		genreDesign(lbl: cell.genreLabel, text: row.genre, font:.systemFont(ofSize: 10))
+//
+//		titleDesign(lbl: cell.engTitleLabel, text: row.title, font: .boldSystemFont(ofSize: 30))
+//
+//		let url = URL(string: row.backdropImage)
+//		let imageURL = try?Data(contentsOf: url!)
+//		let image = UIImage(data: imageURL!)
+//		posterDesign(imv: cell.posterImageView, image: image!)
+//
+//		rateDesign(lbl: cell.rateLabel, text:"평점", font: .systemFont(ofSize:5), backgroundColor: .orange)
+//		ratenumDesign(lbl: cell.rateNumLabel, text: row.rate, font: .systemFont(ofSize:5), backgroundColor: .white)
+//
+//		titleDesign(lbl: cell.korTitleLabel, text: row.korTitle, font: .boldSystemFont(ofSize: 30))
+//
+//		genreDesign(lbl: cell.dateLabel, text: row.releaseDate, font: .systemFont(ofSize: 13))
 		
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "CastViewController") as! CastViewController
-		let row = mainTvShow.tvShow[indexPath.row]
 		
-		vc.titleText = row.korTitle
-		vc.castUrl = row.backdropImage
+//		let row = mainTvShow.tvShow[indexPath.row]
+		
+//		vc.titleText = row.korTitle
+//		vc.castUrl = row.backdropImage
+		
+		let row = mainMovieDate[indexPath.row]
+		if let url = URL(string: "https://image.tmdb.org/t/p/original\(row.backdrop_path)") {
+			vc.castUrl = url
+		} 
+		vc.titleText = row.title
+		
 		
 		navigationController?.pushViewController(vc, animated: true)
 		
@@ -108,7 +163,15 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 		return 350
 	}
 	
-	
+	//prefetchRowAt
+	func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+		for indexPath in indexPaths {
+			if mainMovieDate.count - 1 == indexPath.row && mainMovieDate.count < totalCount {
+				startPage += 10
+				fetchData()
+			}
+		}
+	}
 
     
     
