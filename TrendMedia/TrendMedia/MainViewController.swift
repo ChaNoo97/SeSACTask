@@ -172,7 +172,10 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 			}
 		}
 	}
-
+	
+	func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+		
+	}
     
     
 }

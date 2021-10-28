@@ -18,7 +18,7 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
 		for indexPath in indexPaths {
 			if movieData.count - 1 == indexPath.row && movieData.count < totalCount {
 				startPage += 10
-				fetchMovieData()
+				fetchMovieData(query: searchBar.text!)
 				print("prefetch: \(indexPath)")
 			}
 		}
@@ -46,17 +46,19 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.prefetchDataSource = self
+		searchBar.delegate = self
 		
 		mainView.backgroundColor = .black
 		buttonDesign(btn: backButton, systemimagename: "xmark", color: .white)
 		searchBar.backgroundColor = .black
+//		searchBar.showsCancelButton = true
 		tableView.backgroundColor = .black
 		
-		fetchMovieData()
+		fetchMovieData(query: "가족")
     }
 	
-	func fetchMovieData() {
-		if let quary = "컴퓨터".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+	func fetchMovieData(query: String) {
+		if let quary = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
 			let url = "https://openapi.naver.com/v1/search/movie.json?query=\(quary)&display=10&start=\(startPage)"
 			
 			let header: HTTPHeaders = [
@@ -140,4 +142,33 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 100
 	}
+}
+
+extension SearchViewController: UISearchBarDelegate {
+	// 검색버튼 == 키보드 리턴버튼
+	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+		print(#function)
+		if let text = searchBar.text {
+			movieData.removeAll()
+			startPage = 1
+			fetchMovieData(query: text)
+		}
+	}
+	
+	//취소 버튼 눌렀을 때 실행
+	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+		print(#function)
+		movieData.removeAll()
+		tableView.reloadData()
+//		searchBar.showsCancelButton = false
+		searchBar.setShowsCancelButton(false, animated: true)
+	}
+	
+	//서치바에 커서 시작
+	func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+		print(#function)
+//		searchBar.showsCancelButton = true
+		searchBar.setShowsCancelButton(true, animated: true)
+	}
+	
 }
