@@ -10,8 +10,11 @@ import UIKit
 class CastTableViewCell: UITableViewCell {
 	
 	static let identifier = "CastTableViewCell"
-	@IBOutlet weak var castLabel: UILabel!
 
+	@IBOutlet weak var castPotoImage: UIImageView!
+	@IBOutlet weak var castNameLabel: UILabel!
+	@IBOutlet weak var castCharacterLabel: UILabel!
+	
 	
 	override func awakeFromNib() {
         super.awakeFromNib()

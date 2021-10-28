@@ -51,4 +51,15 @@ extension UIViewController {
 		lbl.textAlignment = .center
 	}
 	
+	func castNameDesign(lbl:UILabel, text: String) {
+		lbl.text = text
+		lbl.font = .boldSystemFont(ofSize: 15 )
+		lbl.sizeToFit()
+	}
+	
+	func castCharacterDesign(lbl:UILabel, text: String) {
+		lbl.text = text
+		lbl.font = .italicSystemFont(ofSize: 13)
+		lbl.sizeToFit()
+	}
 }

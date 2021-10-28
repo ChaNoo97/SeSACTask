@@ -54,7 +54,7 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
 //		searchBar.showsCancelButton = true
 		tableView.backgroundColor = .black
 		
-		fetchMovieData(query: "가족")
+		fetchMovieData(query: "")
     }
 	
 	func fetchMovieData(query: String) {

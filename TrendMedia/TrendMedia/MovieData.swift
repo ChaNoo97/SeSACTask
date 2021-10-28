@@ -8,6 +8,7 @@
 import Foundation
 
 struct MovieDate {
+	let id: Int
 	let media_type: String
 	let backdrop_path: String
 	let vote_average: Double

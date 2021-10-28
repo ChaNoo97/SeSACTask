@@ -53,6 +53,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 		TMDBManager.shared.fetchTrendData(apikey: APIkey.TMDB_KEY) { json in
 			let result = json["results"]
 			for i in 0...result.count-1 {
+				let id = result[i]["id"].intValue
 				let mediaType = result[i]["media_type"].stringValue
 				let backdropPath = result[i]["backdrop_path"].stringValue.replacingOccurrences(of: "", with: "" )
 				let voteAverage = result[i]["vote_average"].doubleValue
@@ -60,6 +61,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 				let releaseDate = result[i]["release_date"].stringValue
 				
 				let data = MovieDate(
+					id: id,
 					media_type: mediaType,
 					backdrop_path: backdropPath,
 					vote_average: voteAverage,
@@ -148,10 +150,10 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 		
 		let row = mainMovieDate[indexPath.row]
 		if let url = URL(string: "https://image.tmdb.org/t/p/original\(row.backdrop_path)") {
-			vc.castUrl = url
+			vc.posterUrl = url
 		} 
 		vc.titleText = row.title
-		
+		vc.movieId = row.id
 		
 		navigationController?.pushViewController(vc, animated: true)
 		
