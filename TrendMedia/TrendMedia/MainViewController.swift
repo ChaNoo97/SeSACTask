@@ -23,11 +23,14 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 	
 	@IBOutlet weak var mainTableView: UITableView!
 	
+
 	let mainTvShow = tvshowList()
 	
 	var mainMovieDate: [MovieDate] = []
 	var startPage = 1
 	var totalCount = 30
+	
+	var urlData: [String] = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -110,7 +113,9 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 		} else {
 			cell.posterImageView.image = UIImage(systemName: "star")
 		}
-			
+		
+		cell.linkButton.setImage(UIImage(systemName: "link.circle.fill"), for: .normal)
+		cell.linkButton.tintColor = .white
 		
 		titleDesign(lbl: cell.engTitleLabel, text: row.media_type, font: .boldSystemFont(ofSize: 20))
 		genreDesign(lbl: cell.genreLabel, text: "", font: .systemFont(ofSize: 0))
@@ -137,7 +142,21 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 //
 //		genreDesign(lbl: cell.dateLabel, text: row.releaseDate, font: .systemFont(ofSize: 13))
 		
+		cell.linkButton.tag = indexPath.row
+		cell.linkButton.addTarget(self, action: #selector(linkBittonClicked(selected: )), for: .touchUpInside)
+
 		return cell
+	}
+	
+	@objc func linkBittonClicked(selected: UIButton) {
+		
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+		
+		let tag = selected.tag
+		vc.movieId = mainMovieDate[tag].id
+		
+		present(vc, animated: true, completion: nil)
+		
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

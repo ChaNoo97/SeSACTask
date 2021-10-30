@@ -27,5 +27,21 @@ struct TMDBManager {
 			}
 		}
 	}
+	
+	func fetchUrlData(apikey: String, movieid: Int, result: @escaping (JSON) -> ()) {
+		
+		let url = "https://api.themoviedb.org/3/movie/\(movieid)/videos?api_key=\(apikey)&language=en-US"
+		
+		AF.request(url, method: .get).validate().responseJSON { response in
+			switch response.result {
+			case .success(let value):
+				let json = JSON(value)
+				print("JSON: \(json)")
+				result(json)
+			case .failure(let error):
+				print(error)
+			}
+		}
+	}
 }
 

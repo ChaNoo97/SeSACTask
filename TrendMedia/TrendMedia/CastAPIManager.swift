@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  CastAPIManager.swift
 //  TrendMedia
 //
 //  Created by Hoo's MacBookAir on 2021/10/28.

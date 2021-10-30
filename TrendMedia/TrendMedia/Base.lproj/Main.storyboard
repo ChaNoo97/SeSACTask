@@ -164,6 +164,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEc-KO-z7o">
+                                                    <rect key="frame" x="332" y="67" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="VAU-Rz-oXb"/>
+                                                        <constraint firstAttribute="height" constant="44" id="i2C-hx-OjU"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="TCu-DS-FhQ" secondAttribute="trailing" constant="8" id="0hg-bd-Zkp"/>
@@ -174,6 +183,7 @@
                                                 <constraint firstItem="nBH-8D-x3N" firstAttribute="top" secondItem="x5f-VK-oYQ" secondAttribute="top" id="KXc-Ke-kdt"/>
                                                 <constraint firstItem="CI2-tc-OhV" firstAttribute="leading" secondItem="x5f-VK-oYQ" secondAttribute="leadingMargin" constant="8" id="PyB-Gf-00V"/>
                                                 <constraint firstItem="TCu-DS-FhQ" firstAttribute="top" secondItem="x5f-VK-oYQ" secondAttribute="topMargin" constant="8" id="YRA-3u-gII"/>
+                                                <constraint firstItem="sEc-KO-z7o" firstAttribute="trailing" secondItem="C1p-LP-12t" secondAttribute="trailing" constant="-10" id="aPl-0n-IiX"/>
                                                 <constraint firstItem="C1p-LP-12t" firstAttribute="leading" secondItem="x5f-VK-oYQ" secondAttribute="leadingMargin" constant="8" id="dVg-0f-riW"/>
                                                 <constraint firstItem="OkB-84-Kbu" firstAttribute="top" secondItem="C1p-LP-12t" secondAttribute="bottom" constant="8" symbolic="YES" id="deu-1n-jyv"/>
                                                 <constraint firstItem="UF4-Yv-IUj" firstAttribute="leading" secondItem="x5f-VK-oYQ" secondAttribute="leadingMargin" constant="24" id="hGL-Ry-Pp3"/>
@@ -183,6 +193,7 @@
                                                 <constraint firstItem="C1p-LP-12t" firstAttribute="top" secondItem="TCu-DS-FhQ" secondAttribute="bottom" constant="8" symbolic="YES" id="uo4-GB-cPU"/>
                                                 <constraint firstItem="CI2-tc-OhV" firstAttribute="top" secondItem="OkB-84-Kbu" secondAttribute="bottom" id="x6A-GJ-mSK"/>
                                                 <constraint firstItem="OkB-84-Kbu" firstAttribute="leading" secondItem="x5f-VK-oYQ" secondAttribute="leadingMargin" constant="8" id="xgV-HZ-ujs"/>
+                                                <constraint firstItem="sEc-KO-z7o" firstAttribute="top" secondItem="C1p-LP-12t" secondAttribute="top" constant="10" id="zsn-j9-Cds"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -190,6 +201,7 @@
                                             <outlet property="engTitleLabel" destination="TCu-DS-FhQ" id="LFg-Sr-KSZ"/>
                                             <outlet property="genreLabel" destination="nBH-8D-x3N" id="znv-HH-RPg"/>
                                             <outlet property="korTitleLabel" destination="OkB-84-Kbu" id="BVy-c0-WZU"/>
+                                            <outlet property="linkButton" destination="sEc-KO-z7o" id="ARO-oM-sEb"/>
                                             <outlet property="posterImageView" destination="C1p-LP-12t" id="dQm-d5-Aph"/>
                                             <outlet property="rateLabel" destination="j1f-yz-Jgo" id="8wa-Bp-9FK"/>
                                             <outlet property="rateNumLabel" destination="rc2-h2-7tN" id="BKa-TU-gxf"/>
@@ -542,6 +554,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbA-0n-J3L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1753.6231884057972" y="97.767857142857139"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="uNy-rQ-h2X">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="xtL-6p-jmf" customClass="WebViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dGc-VJ-y64">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QL-hE-OWa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2PW-ol-GIP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9QL-hE-OWa" firstAttribute="top" secondItem="2PW-ol-GIP" secondAttribute="top" id="0Am-74-ApC"/>
+                            <constraint firstItem="9QL-hE-OWa" firstAttribute="leading" secondItem="2PW-ol-GIP" secondAttribute="leading" id="1p3-ha-26W"/>
+                            <constraint firstItem="2PW-ol-GIP" firstAttribute="bottom" secondItem="9QL-hE-OWa" secondAttribute="bottom" id="1wo-sV-hRy"/>
+                            <constraint firstItem="2PW-ol-GIP" firstAttribute="trailing" secondItem="9QL-hE-OWa" secondAttribute="trailing" id="jdM-cQ-I9V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="WebView" destination="9QL-hE-OWa" id="PPD-ks-d2K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRW-Cf-9ex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="785"/>
         </scene>
         <!--Video Collection View Controller-->
         <scene sceneID="5Ii-le-na5">

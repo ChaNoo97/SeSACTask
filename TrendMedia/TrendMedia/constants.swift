@@ -12,5 +12,4 @@ struct APIkey {
 }
 struct Endpoint {
 	static let TMDBURL = "https://api.themoviedb.org/3/trending/movie/day?api_key="
-
 }

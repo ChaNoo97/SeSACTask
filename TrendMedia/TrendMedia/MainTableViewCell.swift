@@ -19,6 +19,8 @@ class MainTableViewCell: UITableViewCell {
 	@IBOutlet weak var rateNumLabel: UILabel!
 	@IBOutlet weak var korTitleLabel: UILabel!
 	@IBOutlet weak var dateLabel: UILabel!
+	@IBOutlet weak var linkButton: UIButton!
+	
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,4 +33,5 @@ class MainTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+	
 }

@@ -25,8 +25,6 @@ class CastViewController: UIViewController {
 	var castData: [CastData] = []
 	
     override func viewDidLoad() {
-		print("무비아이디\(movieId!)")
-		
         super.viewDidLoad()
 		castTableView.delegate = self
 		castTableView.dataSource = self
