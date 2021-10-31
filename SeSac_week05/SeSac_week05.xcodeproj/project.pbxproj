@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE84AF1A2729415D00882A37 /* KakaoOCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84AF192729415D00882A37 /* KakaoOCRViewController.swift */; };
 		FE84AF1C272942D400882A37 /* kakaoOCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84AF1B272942D400882A37 /* kakaoOCRManager.swift */; };
+		FE84AF26272A225A00882A37 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = FE84AF25272A225A00882A37 /* JGProgressHUD */; };
 		FEA899E22728D19000A64516 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA899E12728D19000A64516 /* Constants.swift */; };
 		FEA899E42728D36500A64516 /* TranslatedAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA899E32728D36500A64516 /* TranslatedAPIManager.swift */; };
 		FEA899E62728E9AC00A64516 /* VisionAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA899E52728E9AC00A64516 /* VisionAPIViewController.swift */; };
@@ -22,6 +23,8 @@
 		FEC2DF672726448D00384838 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FEC2DF662726448D00384838 /* Alamofire */; };
 		FEC2DF6A272644F600384838 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FEC2DF69272644F600384838 /* SwiftyJSON */; };
 		FEC2DF8E2727929400384838 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2DF8D2727929400384838 /* TranslateViewController.swift */; };
+		FEEBBA43272B7EE00099D106 /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEBBA42272B7EE00099D106 /* AsyncViewController.swift */; };
+		FEEBBA45272B94970099D106 /* UILable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEBBA44272B94970099D106 /* UILable+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,8 @@
 		FEC2DF5D2726445300384838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEC2DF5F2726445300384838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEC2DF8D2727929400384838 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		FEEBBA42272B7EE00099D106 /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncViewController.swift; sourceTree = "<group>"; };
+		FEEBBA44272B94970099D106 /* UILable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILable+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEC2DF6A272644F600384838 /* SwiftyJSON in Frameworks */,
+				FE84AF26272A225A00882A37 /* JGProgressHUD in Frameworks */,
 				FEC2DF672726448D00384838 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,9 +80,11 @@
 		FEC2DF502726445100384838 /* SeSac_week05 */ = {
 			isa = PBXGroup;
 			children = (
+				FEEBBA44272B94970099D106 /* UILable+Extension.swift */,
 				FEC2DF512726445100384838 /* AppDelegate.swift */,
 				FEC2DF532726445100384838 /* SceneDelegate.swift */,
 				FEC2DF552726445100384838 /* ViewController.swift */,
+				FEEBBA42272B7EE00099D106 /* AsyncViewController.swift */,
 				FEC2DF8D2727929400384838 /* TranslateViewController.swift */,
 				FEA899E32728D36500A64516 /* TranslatedAPIManager.swift */,
 				FEA899E12728D19000A64516 /* Constants.swift */,
@@ -111,6 +119,7 @@
 			packageProductDependencies = (
 				FEC2DF662726448D00384838 /* Alamofire */,
 				FEC2DF69272644F600384838 /* SwiftyJSON */,
+				FE84AF25272A225A00882A37 /* JGProgressHUD */,
 			);
 			productName = SeSac_week05;
 			productReference = FEC2DF4E2726445100384838 /* SeSac_week05.app */;
@@ -143,6 +152,7 @@
 			packageReferences = (
 				FEC2DF652726448D00384838 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				FEC2DF68272644F600384838 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				FE84AF24272A225A00882A37 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = FEC2DF4F2726445100384838 /* Products */;
 			projectDirPath = "";
@@ -173,7 +183,9 @@
 			files = (
 				FEA899E22728D19000A64516 /* Constants.swift in Sources */,
 				FEC2DF562726445100384838 /* ViewController.swift in Sources */,
+				FEEBBA43272B7EE00099D106 /* AsyncViewController.swift in Sources */,
 				FE84AF1C272942D400882A37 /* kakaoOCRManager.swift in Sources */,
+				FEEBBA45272B94970099D106 /* UILable+Extension.swift in Sources */,
 				FE84AF1A2729415D00882A37 /* KakaoOCRViewController.swift in Sources */,
 				FEA899E62728E9AC00A64516 /* VisionAPIViewController.swift in Sources */,
 				FEC2DF8E2727929400384838 /* TranslateViewController.swift in Sources */,
@@ -402,6 +414,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FE84AF24272A225A00882A37 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		FEC2DF652726448D00384838 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -421,6 +441,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FE84AF25272A225A00882A37 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE84AF24272A225A00882A37 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
 		FEC2DF662726448D00384838 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FEC2DF652726448D00384838 /* XCRemoteSwiftPackageReference "Alamofire" */;

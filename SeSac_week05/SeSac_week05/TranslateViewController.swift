@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Network
+
 import Alamofire
 import SwiftyJSON
+
 
 class TranslateViewController: UIViewController {
 
@@ -21,11 +24,31 @@ class TranslateViewController: UIViewController {
 		}
 	}
 	
+	//네트워크 변경 감지 클래스
+	let networkMoniter = NWPathMonitor()
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
-		
-	
+		//네트워크 변경 감지 클래스를 통해 사용자의 네트워크 상태가 변경될 때마다 확인
+		networkMoniter.pathUpdateHandler = { path in
+			if path.status == .satisfied {
+				print("Network Conneted")
+				
+				if path.usesInterfaceType(.cellular) {
+					print("Celluar Status")
+				} else if path.usesInterfaceType(.wifi) {
+					print("Celluar Wifi")
+				} else {
+					print("Other")
+				}
+				
+			} else {
+				//toste 메세지? (가볍게)
+				print("Network Disconneted")
+			}
+		}
+		networkMoniter.start(queue: DispatchQueue.global())
     }
 	
 	
