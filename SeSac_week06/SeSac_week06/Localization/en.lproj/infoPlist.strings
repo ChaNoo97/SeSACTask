@@ -1,0 +1,11 @@
+/* 
+  infoPlist.strings
+  SeSac_week06
+
+  Created by Hoo's MacBookAir on 2021/11/01.
+  
+*/
+
+
+CFBundleDisplayName = "my diary";
+NSCameraUsageDescription = "Please Access Camera";

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddViewController" id="Y6W-OH-hqX" customClass="AddViewController" customModule="SeSac_week06" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PLc-OW-yVH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="385.5"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNj-8H-xe7">
+                                <rect key="frame" x="20" y="449.5" width="374" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrP-qT-3hn">
+                                <rect key="frame" x="20" y="532" width="374" height="62.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZYR-cZ-9WU">
+                                <rect key="frame" x="20" y="614.5" width="374" height="227.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jrP-qT-3hn" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="4E9-Bd-fkZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZYR-cZ-9WU" secondAttribute="bottom" constant="20" id="8Nx-cp-KlL"/>
+                            <constraint firstItem="mNj-8H-xe7" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.07" id="8k4-EP-h2O"/>
+                            <constraint firstItem="ZYR-cZ-9WU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="9uc-kx-0bW"/>
+                            <constraint firstItem="mNj-8H-xe7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AJp-3x-oJE"/>
+                            <constraint firstItem="PLc-OW-yVH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="BCU-eg-huj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PLc-OW-yVH" secondAttribute="trailing" id="BfB-SK-jyF"/>
+                            <constraint firstItem="mNj-8H-xe7" firstAttribute="top" secondItem="PLc-OW-yVH" secondAttribute="bottom" constant="20" id="EKQ-qW-uFd"/>
+                            <constraint firstItem="ZYR-cZ-9WU" firstAttribute="top" secondItem="jrP-qT-3hn" secondAttribute="bottom" constant="20" id="JbK-UB-qMT"/>
+                            <constraint firstItem="jrP-qT-3hn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="VbY-Wa-nsF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZYR-cZ-9WU" secondAttribute="trailing" constant="20" id="WcE-5q-l4P"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mNj-8H-xe7" secondAttribute="trailing" constant="20" id="Ya6-LN-fh7"/>
+                            <constraint firstItem="PLc-OW-yVH" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.43" id="aYw-cA-orY"/>
+                            <constraint firstItem="PLc-OW-yVH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gzi-ny-duY"/>
+                            <constraint firstItem="jrP-qT-3hn" firstAttribute="top" secondItem="mNj-8H-xe7" secondAttribute="bottom" constant="20" id="v0S-xt-o3p"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jrP-qT-3hn" secondAttribute="trailing" constant="20" id="way-LJ-G3b"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
