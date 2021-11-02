@@ -11,7 +11,8 @@ import Kingfisher
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITableViewDataSourcePrefetching {
 	
 	@IBOutlet weak var findCinemaButton: UIBarButtonItem!
-	@IBOutlet weak var leftButton: UIBarButtonItem!
+	@IBOutlet weak var boxofficeButton: UIBarButtonItem!
+	@IBOutlet weak var rightButton: UIBarButtonItem!
 	
 	@IBOutlet weak var topView: UIView!
 	@IBOutlet weak var titleLabel: UILabel!
@@ -76,13 +77,17 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 			self.mainTableView.reloadData()
 		}
 	}
-
+	@IBAction func boxofficeButtomClicked(_ sender: UIButton) {
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "BoxofficeViewController") as! BoxofficeViewController
+		navigationController?.pushViewController(vc, animated: true)
+	}
+	
 	@IBAction func findCinemaButtonClicked(_ sender: UIBarButtonItem) {
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "FindCinemaViewController") as! FindCinemaViewController
 		navigationController?.pushViewController(vc, animated: true)
 	}
 	
-	@IBAction func leftButtonClicked(_ sender: Any) {
+	@IBAction func rightButtonClicked(_ sender: Any) {
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true, completion: nil)

@@ -9,7 +9,13 @@ import UIKit
 
 class BoxofficeTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	static let identifier = "BoxofficeTableViewCell"
+	
+	
+	@IBOutlet weak var movieNameLabel: UILabel!
+	@IBOutlet weak var openDayLabel: UILabel!
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

@@ -14,3 +14,8 @@ struct MovieModel {
 	var userRatingData: String
 	var subtitle: String
 }
+
+struct boxofficeData {
+	var titleData: String
+	var openDt: String
+}
