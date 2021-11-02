@@ -33,6 +33,7 @@ class ViewController: UIViewController {
 		*/
 		
 		welcomLabel.text = LocalizableStrings.welcome_text.localized
+//		welcomLabel.text = NSLocalizedString("data_backup", tableName: "setting", bundle: .main, value: "", comment: "")
 		//보통 폰트 사이즈: CGFloat ==> 11~20"
 		welcomLabel.font = UIFont().mainBlack
 		

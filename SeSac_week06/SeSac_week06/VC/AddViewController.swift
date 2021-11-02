@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddViewController: UIViewController {
-
+	@IBOutlet weak var writeTitleTextField: UITextField!
+	@IBOutlet weak var writeContentTextView: UITextView!
+	
+	let localRealm = try! Realm()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -16,6 +21,7 @@ class AddViewController: UIViewController {
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveButton))
 		navigationItem.title = "일기 작성"
         
+		print("Realm is located at:", localRealm.configuration.fileURL!)
     }
     
 	@objc func backButton() {
@@ -23,6 +29,11 @@ class AddViewController: UIViewController {
 	}
 	
 	@objc func saveButton() {
+		
+		let task = UserDiary(diaryTitle: writeTitleTextField.text!, diaryContent: writeContentTextView.text!, writeDate: Date(), regDate: Date())
+		try! localRealm.write{
+			localRealm.add(task)
+		}
 		
 	}
 
