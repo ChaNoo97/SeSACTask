@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
 	
 	@objc func bookmarkButtonClicked(sender: UIButton) {
 		try! localRealm.write{
-			tasks[sender.tag].bookmarkBtn = !tasks[sender.tag].bookmarkBtn
+			tasks[sender.tag].bookmarkBtn.toggle()
 		}
 		tableView.reloadData()
 	}
