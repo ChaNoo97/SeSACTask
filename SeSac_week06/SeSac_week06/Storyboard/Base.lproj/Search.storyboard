@@ -37,7 +37,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-jk-tQh">
-                                                    <rect key="frame" x="28" y="41" width="116" height="20"/>
+                                                    <rect key="frame" x="28" y="41" width="266" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="hiW-x9-Nwv"/>
                                                     </constraints>
@@ -67,7 +67,7 @@
                                                 <constraint firstItem="m6B-jk-tQh" firstAttribute="leading" secondItem="ATi-bg-Cfa" secondAttribute="leadingMargin" constant="8" id="B7V-p3-vDX"/>
                                                 <constraint firstItem="m6B-jk-tQh" firstAttribute="top" secondItem="fsk-7a-FOQ" secondAttribute="bottom" id="DJW-mU-UG4"/>
                                                 <constraint firstItem="dcz-cy-LBU" firstAttribute="top" secondItem="fsk-7a-FOQ" secondAttribute="bottom" constant="20" id="F3A-x8-T1C"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="m6B-jk-tQh" secondAttribute="trailing" constant="250" id="GOJ-pj-7s4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="m6B-jk-tQh" secondAttribute="trailing" constant="100" id="GOJ-pj-7s4"/>
                                                 <constraint firstItem="x3U-yD-DUl" firstAttribute="leading" secondItem="ATi-bg-Cfa" secondAttribute="leadingMargin" constant="8" id="NRg-fS-BvW"/>
                                                 <constraint firstItem="x3U-yD-DUl" firstAttribute="top" secondItem="m6B-jk-tQh" secondAttribute="bottom" constant="8" id="Q4U-M5-GLV"/>
                                                 <constraint firstAttribute="bottom" secondItem="dcz-cy-LBU" secondAttribute="bottom" constant="8" id="e0A-SO-PJ5"/>

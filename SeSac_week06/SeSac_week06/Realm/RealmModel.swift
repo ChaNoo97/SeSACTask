@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Diary: Object {
+class UserDiary: Object {
 	@Persisted var diaryTitle: String
 	@Persisted var diaryContent: String?
 	@Persisted var writeDate = Date()
