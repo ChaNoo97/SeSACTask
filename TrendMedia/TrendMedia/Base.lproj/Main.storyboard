@@ -270,8 +270,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dk7-9A-bWn">
-                                <rect key="frame" x="0.0" y="71" width="414" height="818"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6mm-G7-DGy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Aad-LB-rNv"/>
+                                </constraints>
+                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dk7-9A-bWn">
+                                <rect key="frame" x="0.0" y="194" width="414" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoxofficeTableViewCell" rowHeight="119" id="1XN-Vg-qt4" customClass="BoxofficeTableViewCell" customModule="TrendMedia" customModuleProvider="target">
@@ -320,19 +326,23 @@
                         <viewLayoutGuide key="safeArea" id="A8n-ZD-0Sg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Dk7-9A-bWn" firstAttribute="leading" secondItem="A8n-ZD-0Sg" secondAttribute="leading" id="VRP-ti-27w"/>
-                            <constraint firstItem="A8n-ZD-0Sg" firstAttribute="bottom" secondItem="Dk7-9A-bWn" secondAttribute="bottom" id="gMA-Ak-f2s"/>
-                            <constraint firstItem="Dk7-9A-bWn" firstAttribute="top" secondItem="A8n-ZD-0Sg" secondAttribute="top" id="iAw-Q3-aVE"/>
-                            <constraint firstItem="A8n-ZD-0Sg" firstAttribute="trailing" secondItem="Dk7-9A-bWn" secondAttribute="trailing" id="jCP-PT-1yg"/>
+                            <constraint firstItem="Dk7-9A-bWn" firstAttribute="top" secondItem="6mm-G7-DGy" secondAttribute="bottom" id="3Kb-tw-a1i"/>
+                            <constraint firstItem="A8n-ZD-0Sg" firstAttribute="trailing" secondItem="6mm-G7-DGy" secondAttribute="trailing" id="576-0P-APs"/>
+                            <constraint firstItem="Dk7-9A-bWn" firstAttribute="leading" secondItem="A8n-ZD-0Sg" secondAttribute="leading" id="74j-xF-HG0"/>
+                            <constraint firstItem="6mm-G7-DGy" firstAttribute="leading" secondItem="A8n-ZD-0Sg" secondAttribute="leading" id="EqR-i0-yri"/>
+                            <constraint firstItem="Dk7-9A-bWn" firstAttribute="trailing" secondItem="A8n-ZD-0Sg" secondAttribute="trailing" id="RS6-Or-o7p"/>
+                            <constraint firstAttribute="bottom" secondItem="Dk7-9A-bWn" secondAttribute="bottom" id="ZXY-g3-9ny"/>
+                            <constraint firstItem="6mm-G7-DGy" firstAttribute="top" secondItem="A8n-ZD-0Sg" secondAttribute="top" id="kHi-Tf-INP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="boxofficeDatePicker" destination="6mm-G7-DGy" id="UGj-ta-bjy"/>
                         <outlet property="boxofficeTableView" destination="Dk7-9A-bWn" id="WSm-sq-0JE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sqa-eH-1rb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.637681159420293" y="-602.00892857142856"/>
+            <point key="canvasLocation" x="110.14492753623189" y="-604.6875"/>
         </scene>
         <!--Find Cinema View Controller-->
         <scene sceneID="Jsh-iA-UJb">
