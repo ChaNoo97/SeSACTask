@@ -58,12 +58,26 @@
                                             <constraint firstItem="jIF-HC-vUt" firstAttribute="top" secondItem="Rnl-Z9-3tg" secondAttribute="top" constant="8" id="x9b-RN-6Yb"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uax-Vh-ndv">
+                                        <rect key="frame" x="350" y="5.5" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="LIN-tS-CRy"/>
+                                            <constraint firstAttribute="width" constant="44" id="nCR-I1-Fiz"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="sortButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBZ-hl-jpk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="def-We-NA5" firstAttribute="top" secondItem="Y6z-lG-tnT" secondAttribute="top" constant="10" id="4we-Sl-5qk"/>
                                     <constraint firstAttribute="trailing" secondItem="Rnl-Z9-3tg" secondAttribute="trailing" constant="20" id="Asu-Kp-OKU"/>
+                                    <constraint firstAttribute="trailing" secondItem="uax-Vh-ndv" secondAttribute="trailing" constant="20" id="Cdh-7c-Cjb"/>
                                     <constraint firstAttribute="height" constant="150" id="TdH-Wi-3J0"/>
+                                    <constraint firstItem="uax-Vh-ndv" firstAttribute="centerY" secondItem="def-We-NA5" secondAttribute="centerY" id="USk-jg-fgQ"/>
                                     <constraint firstItem="Rnl-Z9-3tg" firstAttribute="top" secondItem="def-We-NA5" secondAttribute="bottom" constant="20" id="X6F-QR-y33"/>
                                     <constraint firstItem="Rnl-Z9-3tg" firstAttribute="leading" secondItem="Y6z-lG-tnT" secondAttribute="leading" constant="20" id="mJ4-nd-oMd"/>
                                     <constraint firstItem="def-We-NA5" firstAttribute="centerX" secondItem="Y6z-lG-tnT" secondAttribute="centerX" id="tLq-3r-Dci"/>
@@ -138,6 +152,7 @@
                     <connections>
                         <outlet property="addButton" destination="jIF-HC-vUt" id="SrR-4p-5IH"/>
                         <outlet property="addTextFiled" destination="jpF-Dh-ySl" id="udh-OZ-UPZ"/>
+                        <outlet property="sortButton" destination="uax-Vh-ndv" id="MO2-sL-1MP"/>
                         <outlet property="tableView" destination="Wir-h9-yLC" id="Fak-82-Zxm"/>
                         <outlet property="titleLabel" destination="def-We-NA5" id="zbd-Z7-pnn"/>
                     </connections>
