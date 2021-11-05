@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
 
 	
 	@IBOutlet weak var sortButton: UIButton!
+	@IBOutlet weak var settingButton: UIButton!
 	
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var addTextFiled: UITextField!
@@ -27,6 +28,9 @@ class MainViewController: UIViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
        
+		settingButton.setImage(UIImage(systemName: "gearshape"), for: .normal)
+		settingButton.tintColor = .lightGray
+		
 		print("RealmLocated:", localRealm.configuration.fileURL!)
 		
 		tasks = localRealm.objects(UserShoppinglist.self)
@@ -51,6 +55,15 @@ class MainViewController: UIViewController {
 			tasks[sender.tag].bookmarkBtn.toggle()
 		}
 		tableView.reloadData()
+	}
+	
+	@IBAction func settingButtonClicked(_ sender: UIButton) {
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+		
+		let nav = UINavigationController(rootViewController: vc)
+		nav.modalPresentationStyle = .fullScreen
+		
+		present(nav, animated: true, completion: nil)
 	}
 	
 	@IBAction func sortButtonClicked(_ sender: UIButton) {

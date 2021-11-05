@@ -70,6 +70,21 @@
                                             <action selector="sortButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBZ-hl-jpk"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPx-JZ-Lpk">
+                                        <rect key="frame" x="20" y="5.5" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Aau-5r-QZU"/>
+                                            <constraint firstAttribute="height" constant="44" id="CGA-pu-VmG"/>
+                                            <constraint firstAttribute="width" constant="44" id="DVL-hX-kjE"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="vn7-NS-sE6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="settingButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7XP-41-4nT"/>
+                                            <action selector="sortButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLl-0g-gV8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -79,6 +94,8 @@
                                     <constraint firstAttribute="height" constant="150" id="TdH-Wi-3J0"/>
                                     <constraint firstItem="uax-Vh-ndv" firstAttribute="centerY" secondItem="def-We-NA5" secondAttribute="centerY" id="USk-jg-fgQ"/>
                                     <constraint firstItem="Rnl-Z9-3tg" firstAttribute="top" secondItem="def-We-NA5" secondAttribute="bottom" constant="20" id="X6F-QR-y33"/>
+                                    <constraint firstItem="sPx-JZ-Lpk" firstAttribute="centerY" secondItem="def-We-NA5" secondAttribute="centerY" id="jvo-Ul-rQ0"/>
+                                    <constraint firstItem="sPx-JZ-Lpk" firstAttribute="leading" secondItem="Y6z-lG-tnT" secondAttribute="leading" constant="20" id="lSQ-m3-1RB"/>
                                     <constraint firstItem="Rnl-Z9-3tg" firstAttribute="leading" secondItem="Y6z-lG-tnT" secondAttribute="leading" constant="20" id="mJ4-nd-oMd"/>
                                     <constraint firstItem="def-We-NA5" firstAttribute="centerX" secondItem="Y6z-lG-tnT" secondAttribute="centerX" id="tLq-3r-Dci"/>
                                 </constraints>
@@ -152,6 +169,7 @@
                     <connections>
                         <outlet property="addButton" destination="jIF-HC-vUt" id="SrR-4p-5IH"/>
                         <outlet property="addTextFiled" destination="jpF-Dh-ySl" id="udh-OZ-UPZ"/>
+                        <outlet property="settingButton" destination="sPx-JZ-Lpk" id="1Zw-Li-px1"/>
                         <outlet property="sortButton" destination="uax-Vh-ndv" id="MO2-sL-1MP"/>
                         <outlet property="tableView" destination="Wir-h9-yLC" id="Fak-82-Zxm"/>
                         <outlet property="titleLabel" destination="def-We-NA5" id="zbd-Z7-pnn"/>
@@ -160,6 +178,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="s6R-29-Sa6">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" id="Y2l-vd-iAe" customClass="SettingViewController" customModule="SeSacWeek06Shoppinglist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KOx-Cq-72S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38t-JR-fHe">
+                                <rect key="frame" x="132" y="94" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fq7-ty-xvK"/>
+                                    <constraint firstAttribute="width" constant="150" id="ksk-ue-Ibn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="backupButtonClicked:" destination="Y2l-vd-iAe" eventType="touchUpInside" id="lIo-Rf-KHt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-bQ-vED">
+                                <rect key="frame" x="132" y="194" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Uox-mE-Ecw"/>
+                                    <constraint firstAttribute="width" constant="150" id="hG6-rX-d5w"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="restoreButtonClicked:" destination="Y2l-vd-iAe" eventType="touchUpInside" id="cvh-nC-2qj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KCz-TJ-XsT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nht-bQ-vED" firstAttribute="top" secondItem="38t-JR-fHe" secondAttribute="bottom" constant="50" id="POF-JX-eoF"/>
+                            <constraint firstItem="38t-JR-fHe" firstAttribute="centerX" secondItem="KOx-Cq-72S" secondAttribute="centerX" id="Zmv-Pt-osa"/>
+                            <constraint firstItem="Nht-bQ-vED" firstAttribute="centerX" secondItem="KOx-Cq-72S" secondAttribute="centerX" id="aPm-Vl-nwv"/>
+                            <constraint firstItem="38t-JR-fHe" firstAttribute="top" secondItem="KCz-TJ-XsT" secondAttribute="top" constant="50" id="w1b-iA-7US"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backUpButton" destination="38t-JR-fHe" id="jJh-VM-r77"/>
+                        <outlet property="restorButton" destination="Nht-bQ-vED" id="Hrg-gH-Tg5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzL-Qj-jps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="98"/>
         </scene>
     </scenes>
     <resources>

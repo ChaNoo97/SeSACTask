@@ -18,6 +18,8 @@
 		FE3AC840273113ED0036E7E3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FE3AC83F273113ED0036E7E3 /* Realm */; };
 		FE3AC842273113ED0036E7E3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE3AC841273113ED0036E7E3 /* RealmSwift */; };
 		FE3AC846273114420036E7E3 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3AC845273114420036E7E3 /* RealmModel.swift */; };
+		FE9563B22733BA0C007BF67C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9563B12733BA0C007BF67C /* SettingViewController.swift */; };
+		FEB4BB472733D0870076C2D9 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = FEB4BB462733D0870076C2D9 /* Zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,7 @@
 		FE3AC83A273104D90036E7E3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FE3AC83C273111430036E7E3 /* ShopinglistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopinglistTableViewCell.swift; sourceTree = "<group>"; };
 		FE3AC845273114420036E7E3 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		FE9563B12733BA0C007BF67C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEB4BB472733D0870076C2D9 /* Zip in Frameworks */,
 				FE3AC842273113ED0036E7E3 /* RealmSwift in Frameworks */,
 				FE3AC840273113ED0036E7E3 /* Realm in Frameworks */,
 			);
@@ -71,6 +75,7 @@
 				FE3AC828273104A70036E7E3 /* SceneDelegate.swift */,
 				FE3AC82A273104A70036E7E3 /* ViewController.swift */,
 				FE3AC82C273104A70036E7E3 /* Main.storyboard */,
+				FE9563B12733BA0C007BF67C /* SettingViewController.swift */,
 				FE3AC83A273104D90036E7E3 /* MainViewController.swift */,
 				FE3AC83C273111430036E7E3 /* ShopinglistTableViewCell.swift */,
 				FE3AC82F273104AA0036E7E3 /* Assets.xcassets */,
@@ -107,6 +112,7 @@
 			packageProductDependencies = (
 				FE3AC83F273113ED0036E7E3 /* Realm */,
 				FE3AC841273113ED0036E7E3 /* RealmSwift */,
+				FEB4BB462733D0870076C2D9 /* Zip */,
 			);
 			productName = SeSacWeek06Shoppinglist;
 			productReference = FE3AC823273104A70036E7E3 /* SeSacWeek06Shoppinglist.app */;
@@ -138,6 +144,7 @@
 			mainGroup = FE3AC81A273104A70036E7E3;
 			packageReferences = (
 				FE3AC83E273113ED0036E7E3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				FEB4BB452733D0860076C2D9 /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = FE3AC824273104A70036E7E3 /* Products */;
 			projectDirPath = "";
@@ -171,6 +178,7 @@
 				FE3AC827273104A70036E7E3 /* AppDelegate.swift in Sources */,
 				FE3AC829273104A70036E7E3 /* SceneDelegate.swift in Sources */,
 				FE3AC83B273104D90036E7E3 /* MainViewController.swift in Sources */,
+				FE9563B22733BA0C007BF67C /* SettingViewController.swift in Sources */,
 				FE3AC83D273111430036E7E3 /* ShopinglistTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +409,14 @@
 				version = 10.18.0;
 			};
 		};
+		FEB4BB452733D0860076C2D9 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -413,6 +429,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FE3AC83E273113ED0036E7E3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		FEB4BB462733D0870076C2D9 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEB4BB452733D0860076C2D9 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
