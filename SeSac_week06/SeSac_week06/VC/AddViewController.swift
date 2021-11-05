@@ -13,6 +13,7 @@ class AddViewController: UIViewController {
 	@IBOutlet weak var writeContentTextView: UITextView!
 	@IBOutlet weak var contentImageView: UIImageView!
 	
+	@IBOutlet weak var dateButton: UIButton!
 	let localRealm = try! Realm()
 	
     override func viewDidLoad() {
@@ -31,7 +32,17 @@ class AddViewController: UIViewController {
 	
 	@objc func saveButton() {
 		
-		let task = UserDiary(diaryTitle: writeTitleTextField.text!, diaryContent: writeContentTextView.text!, writeDate: Date(), regDate: Date())
+		
+
+		let format = DateFormatter()
+		format.dateFormat = "yyyy년 MM월 dd일"
+		
+//		let date = dateButton.currentTitle!
+//		let value = format.date(from: date)!
+	
+		guard let date = dateButton.currentTitle, let value = format.date(from: date) else{ return }
+		
+		let task = UserDiary(diaryTitle: writeTitleTextField.text!, diaryContent: writeContentTextView.text!, writeDate: value, regDate: Date())
 		try! localRealm.write{
 			localRealm.add(task)
 			saveImageToDocumentdirectory(imageName: "\(task._id).jpg", image: contentImageView.image!)
@@ -73,5 +84,39 @@ class AddViewController: UIViewController {
 		}
 		
 	}
-
+	@IBAction func dateButtonClicked(_ sender: UIButton) {
+		let alert = UIAlertController(title: "날짜 선택", message: "날짜를 선택해 주세요", preferredStyle: .alert)
+		//Alert Customizing
+		// 왜 안나올까?
+		// 1. 얼럿안에 들어와서 그런가?
+		// 2. 스토리보드가 인식이 안되나? DatePickerViewController
+		// 3. 스토리보드 씬 + 클래스 -> 화면전환 코드
+//		let contentView = DatePickerViewController()
+		guard let contentView = self.storyboard?.instantiateViewController(withIdentifier: "DatePickerViewController") as? DatePickerViewController else {
+			
+			print("DatePickerViewController에 오류가 있음")
+			return
+		}
+		contentView.view.backgroundColor = .clear
+//		contentView.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+		contentView.preferredContentSize.height = 200
+		
+		alert.setValue(contentView, forKey: "contentViewController")
+		
+		let cancle = UIAlertAction(title: "취소", style: .default, handler: nil)
+		let ok = UIAlertAction(title: "확인", style: .default) { action in
+			
+			let format = DateFormatter()
+			format.dateFormat = "yyyy년 MM월 dd일"
+			let value = format.string(from: contentView.datePicker.date)
+			
+			//확인버튼을 눌렀을 때 버튼의 타이틀 변경
+			self.dateButton.setTitle(value, for: .normal)
+		}
+		
+		alert.addAction(cancle)
+		alert.addAction(ok)
+		self.present(alert, animated: true, completion: nil)
+	}
+	
 }

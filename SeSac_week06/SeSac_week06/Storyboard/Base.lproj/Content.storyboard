@@ -25,6 +25,9 @@
                                 <rect key="frame" x="20" y="532" width="374" height="62.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="dateButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TFV-3u-jIQ"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZYR-cZ-9WU">
                                 <rect key="frame" x="20" y="614.5" width="374" height="227.5"/>
@@ -61,6 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="contentImageView" destination="PLc-OW-yVH" id="Sqz-8e-Gwe"/>
+                        <outlet property="dateButton" destination="jrP-qT-3hn" id="3OB-UF-slE"/>
                         <outlet property="writeContentTextView" destination="ZYR-cZ-9WU" id="mMN-bg-ksR"/>
                         <outlet property="writeTitleTextField" destination="mNj-8H-xe7" id="RIF-wh-dd1"/>
                     </connections>
@@ -68,6 +72,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="9Lm-qA-XId">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerViewController" id="e5e-gG-apg" customClass="DatePickerViewController" customModule="SeSac_week06" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K8P-gQ-2NM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="RFT-1z-Oz4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jku-MX-avx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jku-MX-avx" firstAttribute="bottom" secondItem="RFT-1z-Oz4" secondAttribute="bottom" id="0e5-gJ-Fhr"/>
+                            <constraint firstItem="RFT-1z-Oz4" firstAttribute="top" secondItem="Jku-MX-avx" secondAttribute="top" id="TP4-bw-MTO"/>
+                            <constraint firstItem="RFT-1z-Oz4" firstAttribute="leading" secondItem="Jku-MX-avx" secondAttribute="leading" id="VJg-PA-A8C"/>
+                            <constraint firstItem="RFT-1z-Oz4" firstAttribute="trailing" secondItem="Jku-MX-avx" secondAttribute="trailing" id="zT7-2b-6Aj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="RFT-1z-Oz4" id="35d-OE-tSe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9g-7C-8xZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="70"/>
         </scene>
     </scenes>
     <resources>

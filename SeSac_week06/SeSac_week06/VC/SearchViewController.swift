@@ -22,8 +22,9 @@ class SearchViewController: UIViewController {
 		
 		searchTableView.delegate = self
 		searchTableView.dataSource = self
+	
        
-		tasks = localRealm.objects(UserDiary.self)
+		tasks = localRealm.objects(UserDiary.self)//.filter("favorite == true")
 		print(tasks)
 		
     }
@@ -97,7 +98,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 		cell.contentLabel.numberOfLines = 0
 		cell.contentLabel.font = UIFont().SCDream2
 		
-		cell.dateLabel.text = "\(row.writeDate)"
+		let format = DateFormatter()
+		format.dateFormat = "yyyy년 MM월 dd일"
+//		let value = format.date(from: row.writeDate)
+		let value = format.string(from: row.writeDate)
+		cell.dateLabel.text = value
 		cell.dateLabel.font = UIFont().SCDream2
 		
 		cell.photoImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).jpg")

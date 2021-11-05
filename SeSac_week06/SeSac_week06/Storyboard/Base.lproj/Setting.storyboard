@@ -15,8 +15,54 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvD-FV-x7q">
+                                <rect key="frame" x="132" y="94" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="KDy-20-AGM"/>
+                                    <constraint firstAttribute="height" constant="50" id="exW-Q5-J1W"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="백업하기"/>
+                                <connections>
+                                    <action selector="backupButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="04N-hN-kbJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOb-8U-8cc">
+                                <rect key="frame" x="132" y="194" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QQJ-bV-l3W"/>
+                                    <constraint firstAttribute="height" constant="50" id="T7N-PF-DUY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="activityViewCon"/>
+                                <connections>
+                                    <action selector="activityButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5mr-wZ-Xt2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dx2-XD-6ZK">
+                                <rect key="frame" x="132" y="294" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HUd-5B-Oj9"/>
+                                    <constraint firstAttribute="width" constant="150" id="ys4-uj-sBR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="복구하기"/>
+                                <connections>
+                                    <action selector="restoreButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="F0s-LY-kTn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dx2-XD-6ZK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="H64-GX-1UR"/>
+                            <constraint firstItem="BvD-FV-x7q" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="M2I-Qf-SNI"/>
+                            <constraint firstItem="YOb-8U-8cc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="s1Q-oh-1Ce"/>
+                            <constraint firstItem="BvD-FV-x7q" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tVN-kg-XK6"/>
+                            <constraint firstItem="dx2-XD-6ZK" firstAttribute="top" secondItem="YOb-8U-8cc" secondAttribute="bottom" constant="50" id="vrw-K3-hnl"/>
+                            <constraint firstItem="YOb-8U-8cc" firstAttribute="top" secondItem="BvD-FV-x7q" secondAttribute="bottom" constant="50" id="y2x-mR-Vtf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting" image="person.circle" catalog="system" id="2f3-j3-hga"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
