@@ -25,17 +25,17 @@ class BoxofficeViewController: UIViewController {
         super.viewDidLoad()
 		
 		//삭제필요
-		try! localRealm.write {
-			localRealm.deleteAll()
-		}
-		tasks = localRealm.objects(BoxofficeData.self)
-		print(tasks)
+//		try! localRealm.write {
+//			localRealm.deleteAll()
+//		}
+//		tasks = localRealm.objects(BoxofficeData.self)
+//		print(tasks)
 		print("realmDic\(localRealm.configuration.fileURL!)")
 		boxofficeDatePicker.datePickerMode = .date
 		boxofficeDatePicker.preferredDatePickerStyle = .wheels
 		boxofficeDatePicker.locale = Locale(identifier: "ko-kr")
 		boxofficeDatePicker.addTarget(self, action: #selector(change) , for: .valueChanged)
-		
+		print("A")
 		fetchData(apiKey: APIkey.koficKey, date: "20211101")
 		
 		boxofficeTableView.delegate = self
@@ -53,35 +53,76 @@ class BoxofficeViewController: UIViewController {
 	}
     
 	func fetchData(apiKey: String, date: String) {
-	
-		let url = Endpoint.koficURL+"key=\(apiKey)&targetDt=\(date)"
-		print(url)
-		AF.request(url, method: .get).validate().responseJSON { response in
-			switch response.result {
-			case .success(let value):
-				let json = JSON(value)
-				print("JSON: \(json)")
-				let list = json["boxOfficeResult"]["dailyBoxOfficeList"]
-				for i in 0...9 {
-					let movieName = list[i]["movieNm"].stringValue
-					let openDate = list[i]["openDt"].stringValue
-
-					//DB Add
-					let task = BoxofficeData(title: movieName, openDt: openDate, uploadDate: date)
-
-					try! self.localRealm.write {
-						self.localRealm.add(task)
+		
+		tasks = localRealm.objects(BoxofficeData.self)
+		let predicate = NSPredicate(format: "uploadDate == %@", date)
+		let filtertasks = tasks.filter(predicate)
+//		tasks = localRealm.objects(BoxofficeData.self).filter("uploadDate == \(date)")
+		
+		if filtertasks.count == 0 {
+			let url = Endpoint.koficURL+"key=\(apiKey)&targetDt=\(date)"
+			print(url)
+			AF.request(url, method: .get).validate().responseJSON { response in
+				switch response.result {
+				case .success(let value):
+					let json = JSON(value)
+					print("JSON: \(json)")
+					let list = json["boxOfficeResult"]["dailyBoxOfficeList"]
+					for i in 0...9 {
+						let movieName = list[i]["movieNm"].stringValue
+						let openDate = list[i]["openDt"].stringValue
+						//DB Add
+						let task = BoxofficeData(title: movieName, openDt: openDate, uploadDate: date)
+						
+						try! self.localRealm.write {
+							self.localRealm.add(task)
+						}
+						
+						let boxofficedata = boxofficeData(titleData: movieName, openDt: openDate)
+						self.data.append(boxofficedata)
 					}
-					//Api -> boxofficeData
-					let boxofficedata = boxofficeData(titleData: movieName, openDt: openDate)
-					self.data.append(boxofficedata)
+					self.boxofficeTableView.reloadData()
+					case .failure(let error):
+						print(error)
 				}
-				self.boxofficeTableView.reloadData()
-			case .failure(let error):
-				print(error)
 			}
+		} else {
+			print("DB에서 옴")
+			for i in 0...9 {
+				let boxofficedata = boxofficeData(titleData: filtertasks[i].title, openDt: filtertasks[i].openDt)
+				self.data.append(boxofficedata)
+			}
+			self.boxofficeTableView.reloadData()
 		}
 	}
+//		let url = Endpoint.koficURL+"key=\(apiKey)&targetDt=\(date)"
+//		print(url)
+//		AF.request(url, method: .get).validate().responseJSON { response in
+//			switch response.result {
+//			case .success(let value):
+//				let json = JSON(value)
+//				print("JSON: \(json)")
+//				let list = json["boxOfficeResult"]["dailyBoxOfficeList"]
+//				for i in 0...9 {
+//					let movieName = list[i]["movieNm"].stringValue
+//					let openDate = list[i]["openDt"].stringValue
+//
+//					//DB Add
+//					let task = BoxofficeData(title: movieName, openDt: openDate, uploadDate: date)
+//
+//					try! self.localRealm.write {
+//						self.localRealm.add(task)
+//					}
+//					//Api -> boxofficeData
+//					let boxofficedata = boxofficeData(titleData: movieName, openDt: openDate)
+//					self.data.append(boxofficedata)
+//				}
+//				self.boxofficeTableView.reloadData()
+//			case .failure(let error):
+//				print(error)
+//			}
+//		}
+//	}
 }
 
 extension BoxofficeViewController: UITableViewDelegate,UITableViewDataSource {
