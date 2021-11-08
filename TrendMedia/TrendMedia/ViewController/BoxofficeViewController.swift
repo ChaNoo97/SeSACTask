@@ -24,12 +24,6 @@ class BoxofficeViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
-		//삭제필요
-//		try! localRealm.write {
-//			localRealm.deleteAll()
-//		}
-//		tasks = localRealm.objects(BoxofficeData.self)
-//		print(tasks)
 		print("realmDic\(localRealm.configuration.fileURL!)")
 		boxofficeDatePicker.datePickerMode = .date
 		boxofficeDatePicker.preferredDatePickerStyle = .wheels
@@ -68,9 +62,10 @@ class BoxofficeViewController: UIViewController {
 					let json = JSON(value)
 					print("JSON: \(json)")
 					let list = json["boxOfficeResult"]["dailyBoxOfficeList"]
-					for i in 0...9 {
-						let movieName = list[i]["movieNm"].stringValue
-						let openDate = list[i]["openDt"].stringValue
+					
+					for data in list {
+						let movieName = data.1["movieNm"].stringValue
+						let openDate = data.1["openDt"].stringValue
 						//DB Add
 						let task = BoxofficeData(title: movieName, openDt: openDate, uploadDate: date)
 						
@@ -88,8 +83,8 @@ class BoxofficeViewController: UIViewController {
 			}
 		} else {
 			print("DB에서 옴")
-			for i in 0...9 {
-				let boxofficedata = boxofficeData(titleData: filtertasks[i].title, openDt: filtertasks[i].openDt)
+			for data in filtertasks {
+				let boxofficedata = boxofficeData(titleData: data.title, openDt: data.openDt)
 				self.data.append(boxofficedata)
 			}
 			self.boxofficeTableView.reloadData()
