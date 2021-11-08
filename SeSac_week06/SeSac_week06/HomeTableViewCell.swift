@@ -9,10 +9,16 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	static let identfier = "HomeTableViewCell"
+	
+	@IBOutlet weak var categoryLabel: UILabel!
+	@IBOutlet weak var collectionView: UICollectionView!
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+//		cell.collectionView.dataSource = self
+//		cell.collectionView.delegate = self
+	}
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

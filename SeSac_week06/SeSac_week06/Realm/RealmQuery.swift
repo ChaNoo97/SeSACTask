@@ -14,7 +14,7 @@ extension UIViewController {
 	func searchQueryFromUserDiary(text: String) -> Results<UserDiary> {
 		let localRealm = try! Realm()
 		
-		let search = localRealm.objects(UserDiary.self).filter("diaryTitle CONTAINS[c] '\(text)' OR content CONTAINS[c] '\(text)' ")
+		let search = localRealm.objects(UserDiary.self).filter("diaryTitle CONTAINS[c] '\(text)' OR diaryContent CONTAINS[c] '\(text)' ")
 		
 		return search
 	}

@@ -32,14 +32,14 @@ class CalendarViewController: UIViewController {
 		
 		let recent = localRealm.objects(UserDiary.self).sorted(byKeyPath: "writeDate",ascending: false).first?.diaryTitle
 		print("recent: \(recent)")
-		let photo = localRealm.objects(UserDiary.self).filter("content != nil").count
+		let photo = localRealm.objects(UserDiary.self).filter("diaryContent != nil").count
 		print("recent: \(photo)")
 		let favorite = localRealm.objects(UserDiary.self).filter("favorite = false")
 		print("recent: \(favorite)")
 		
 		//String -> ' ' , AND OR (공식문서에 있음)
 		// 검색할때는 contain 이 맞다. 필터는 일기를 포함한게 아니라 일기에 만 나옴
-		let search = localRealm.objects(UserDiary.self).filter("diaryTitle CONTAINS[c] '일기' OR content CONTAINS[c] 'd'")
+		let search = localRealm.objects(UserDiary.self).filter("diaryTitle CONTAINS[c] '일기' OR diaryContent CONTAINS[c] 'd'")
 		print("recent: \(search)")
     }
     

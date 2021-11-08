@@ -90,13 +90,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 		}
 		
 		let row = tasks[indexPath.row]
+		cell.configureCell(row: row)
 		
-		cell.titleLabel.text = row.diaryTitle
-		cell.titleLabel.font = UIFont().SCDream5
-		
-		cell.contentLabel.text = row.diaryContent
-		cell.contentLabel.numberOfLines = 0
-		cell.contentLabel.font = UIFont().SCDream2
+//		cell.titleLabel.text = row.diaryTitle
+//		cell.titleLabel.font = UIFont().SCDream5
+//
+//		cell.contentLabel.text = row.diaryContent
+//		cell.contentLabel.numberOfLines = 0
+//		cell.contentLabel.font = UIFont().SCDream2
 		
 		let format = DateFormatter()
 		format.dateFormat = "yyyy년 MM월 dd일"

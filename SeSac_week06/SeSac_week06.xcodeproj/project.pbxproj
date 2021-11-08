@@ -13,6 +13,8 @@
 		FE5505D62734B658006B523E /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5505D52734B658006B523E /* DatePickerViewController.swift */; };
 		FE5505D82734CE86006B523E /* RealmQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5505D72734CE85006B523E /* RealmQuery.swift */; };
 		FE5505DA2734D01F006B523E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5505D92734D01F006B523E /* Date+Extension.swift */; };
+		FE5506092738AD02006B523E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5506082738AD02006B523E /* HomeTableViewCell.swift */; };
+		FE55060D2738B39F006B523E /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55060C2738B39F006B523E /* HomeCollectionViewCell.swift */; };
 		FE9563B027336DD9007BF67C /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = FE9563AF27336DD9007BF67C /* Zip */; };
 		FEB4BB4A2734ADAE0076C2D9 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = FEB4BB492734ADAE0076C2D9 /* FSCalendar */; };
 		FEEBBA55272F6F590099D106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEBBA54272F6F590099D106 /* AppDelegate.swift */; };
@@ -49,6 +51,8 @@
 		FE5505D52734B658006B523E /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatePickerViewController.swift; path = SeSac_week06/DatePickerViewController.swift; sourceTree = SOURCE_ROOT; };
 		FE5505D72734CE85006B523E /* RealmQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuery.swift; sourceTree = "<group>"; };
 		FE5505D92734D01F006B523E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FE5506082738AD02006B523E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = SeSac_week06/HomeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		FE55060C2738B39F006B523E /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		FEEBBA51272F6F590099D106 /* SeSac_week06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSac_week06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEBBA54272F6F590099D106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEBBA56272F6F590099D106 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		FEEBBA53272F6F590099D106 /* SeSac_week06 */ = {
 			isa = PBXGroup;
 			children = (
+				FE55060C2738B39F006B523E /* HomeCollectionViewCell.swift */,
 				FE3AC8172730C95B0036E7E3 /* Realm */,
 				FEEBBAA6272FC0F40099D106 /* VC */,
 				FEEBBAA5272FC0B40099D106 /* Storyboard */,
@@ -154,6 +159,7 @@
 				FEEBBA56272F6F590099D106 /* SceneDelegate.swift */,
 				FEEBBA58272F6F590099D106 /* ViewController.swift */,
 				FEEBBAA7272FD9020099D106 /* SearchTableViewCell.swift */,
+				FE5506082738AD02006B523E /* HomeTableViewCell.swift */,
 				FEEBBA5D272F6F5C0099D106 /* Assets.xcassets */,
 				FEEBBA5F272F6F5C0099D106 /* LaunchScreen.storyboard */,
 				FEEBBA62272F6F5C0099D106 /* Info.plist */,
@@ -320,6 +326,7 @@
 				FE5505D62734B658006B523E /* DatePickerViewController.swift in Sources */,
 				FEEBBAA0272FBB420099D106 /* AddViewController.swift in Sources */,
 				FEEBBAA4272FBFE20099D106 /* CalendarViewController.swift in Sources */,
+				FE55060D2738B39F006B523E /* HomeCollectionViewCell.swift in Sources */,
 				FE5505DA2734D01F006B523E /* Date+Extension.swift in Sources */,
 				FEEBBA9E272FB9A60099D106 /* SearchViewController.swift in Sources */,
 				FEEBBA55272F6F590099D106 /* AppDelegate.swift in Sources */,
@@ -330,6 +337,7 @@
 				FEEBBAA8272FD9020099D106 /* SearchTableViewCell.swift in Sources */,
 				FEEBBA9C272FB4020099D106 /* HomeViewController.swift in Sources */,
 				FE3AC8192730C97E0036E7E3 /* RealmModel.swift in Sources */,
+				FE5506092738AD02006B523E /* HomeTableViewCell.swift in Sources */,
 				FEEBBA57272F6F590099D106 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

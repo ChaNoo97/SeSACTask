@@ -12,8 +12,16 @@ class SearchTableViewCell: UITableViewCell {
 	@IBOutlet weak var contentLabel: UILabel!
 	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var titleLabel: UILabel!
-	
 	@IBOutlet weak var photoImageView: UIImageView!
+	
+	func configureCell(row: UserDiary) {
+		titleLabel.text = row.diaryTitle
+		titleLabel.font = UIFont().SCDream5
+		
+		contentLabel.text = row.diaryContent
+		contentLabel.numberOfLines = 0
+		contentLabel.font = UIFont().SCDream2
+	}
 	
 	static let identifier = "SearchTableViewCell"
 	
