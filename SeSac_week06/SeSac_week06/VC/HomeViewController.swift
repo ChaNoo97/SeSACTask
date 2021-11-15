@@ -11,6 +11,16 @@ class HomeViewController: UIViewController {
 	
 	@IBOutlet weak var HomeTableView: UITableView!
 	
+	let array = [
+		Array(repeating: "a", count: 20),
+		Array(repeating: "b", count: 20),
+		Array(repeating: "c", count: 20),
+		Array(repeating: "d", count: 20),
+		Array(repeating: "e", count: 20),
+		Array(repeating: "f", count: 20),
+		Array(repeating: "g", count: 20),
+		Array(repeating: "h", count: 20)
+	]
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,22 +50,26 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+		return array.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identfier, for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
 		
-		cell.categoryLabel.backgroundColor = .yellow
-		cell.collectionView.backgroundColor = .lightGray
+		cell.data = array[indexPath.row]
+		cell.categoryLabel.text = "\(array[indexPath.row])"
+//		cell.categoryLabel.backgroundColor = .blue
+		//코드 진행순서 cell awakeNib -> 여기 (우선순위 가 이거인것처럼 보임)
+		cell.categoryLabel.backgroundColor = .red
 		
-		cell.collectionView.dataSource = self
-		cell.collectionView.delegate = self
+		cell.collectionView.backgroundColor = .lightGray
 		
 		cell.collectionView.tag = indexPath.row
 		
-		//딱 멈추는거 (디바이스 전체가 아니면 사용하기 애매함)
-		cell.collectionView.isPagingEnabled = true
+//		//딱 멈추는거 (디바이스 전체가 아니면 사용하기 애매함)
+//		cell.collectionView.isPagingEnabled = true
+//		//dueque 오류 해결 방법
+//		cell.collectionView.reloadData()
 		
 		
 		
@@ -68,39 +82,3 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 	
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 20
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
-		
-		cell.imageView.backgroundColor = .brown
-		
-		
-		return cell
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		
-		if collectionView.tag == 0 {
-			return CGSize(width: UIScreen.main.bounds.width, height: 100)
-		} else {
-			return CGSize(width: 150, height: 100)
-		}
-		
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-		if collectionView.tag == 0 {
-			return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-		} else {
-			return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
-		}
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return collectionView.tag == 0 ? 0 : 10
-	}
-}
