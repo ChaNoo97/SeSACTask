@@ -58,7 +58,8 @@ class MainViewController: UIViewController {
 	}
 	
 	@IBAction func settingButtonClicked(_ sender: UIButton) {
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+		let sb = UIStoryboard(name: "Main", bundle: nil)
+		let vc = sb.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
 		
 		let nav = UINavigationController(rootViewController: vc)
 		nav.modalPresentationStyle = .fullScreen
