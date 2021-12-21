@@ -9,5 +9,5 @@ import Foundation
 
 struct APIHelper {
 	static let TMDBKey = "1ccde78f4677c971965c4a218e671f0a"
-	static let query = "빅뱅"
+	static let query = "1"
 }

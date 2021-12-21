@@ -10,7 +10,7 @@ import Foundation
 class APIService {
 	let sourceURL = URL(string: "https://api.themoviedb.org/3/search/tv?api_key="+APIHelper.TMDBKey+"&language=en-US&page=1&include_adult=false&query="+APIHelper.query)
 	
-	func requestSearchTvShows() {
+	func requestSearchTvShows(completion: @escaping (TVShows?) -> Void) {
 		guard let sourceURL = sourceURL else {
 			print("URL Optional")
 			return
@@ -32,9 +32,11 @@ class APIService {
 			}
 			
 			if let data = data, let TvShowsData = try? JSONDecoder().decode(TVShows.self, from: data) {
-				print("SUCCEED", TvShowsData)
+				print("SUCCEED")
+				completion(TvShowsData)
 				return
 			}
+			completion(nil)
 		}.resume()
 	}
 }
