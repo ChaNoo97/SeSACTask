@@ -75,24 +75,22 @@ class ViewController: UIViewController {
 		bottonView.addSubview(refreshButton)
 		bottonView.addSubview(shareButton)
 	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .white
 		tableView.delegate = self
 		tableView.dataSource = self
+		tableView.tableHeaderView = headerView
 		
 		setup()
 		
-		headerView.snp.makeConstraints {
-			$0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
-			$0.height.equalTo(150)
-		}
 		
-		descriptionView.snp.makeConstraints {
-			$0.leading.trailing.equalTo(headerView).inset(20)
-			$0.top.equalTo(headerView.snp.top).offset(50)
-			$0.height.equalTo(200)
-		}
+		
+//		descriptionView.snp.makeConstraints {
+//			$0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
+//			$0.height.equalTo(200)
+//		}
 		
 		moreButton.snp.makeConstraints {
 			$0.centerX.equalTo(descriptionView)
@@ -102,8 +100,7 @@ class ViewController: UIViewController {
 		}
 		
 		tableView.snp.makeConstraints {
-			$0.top.equalTo(descriptionView.snp.bottom)
-			$0.trailing.leading.equalTo(view.safeAreaLayoutGuide)
+			$0.top.trailing.leading.equalTo(view.safeAreaLayoutGuide)
 			$0.bottom.equalTo(view).inset(80)
 		}
 		
@@ -151,6 +148,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
 		return UITableViewCell()
+	}
+	
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 100
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		print(indexPath.row)
 	}
 	
 	

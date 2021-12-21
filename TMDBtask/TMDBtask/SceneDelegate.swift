@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  StretchyTableView
+//  TMDBtask
 //
-//  Created by Hoo's MacBookPro on 2021/12/20.
+//  Created by Hoo's MacBookPro on 2021/12/21.
 //
 
 import UIKit
@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		self.window = UIWindow(windowScene: windowScene)
-		let vc = StretchyViewController()
+		let vc = ViewController()
 		window?.rootViewController = vc
 		window?.makeKeyAndVisible()
 	}
