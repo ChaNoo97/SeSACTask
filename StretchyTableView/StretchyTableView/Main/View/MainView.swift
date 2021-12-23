@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 
+//MARK: View
 class MainView: UIView {
 	let mainTableView = UITableView()
 	let headerImageView = UIImageView()
@@ -30,7 +31,6 @@ class MainView: UIView {
 	
 	func configure() {
 		mainTableView.backgroundColor = .white
-		descriptionView.backgroundColor = .white
 		headerImageView.backgroundColor = .red
 		bottonView.backgroundColor = .green
 		refreshButton.backgroundColor = .cyan
@@ -39,7 +39,7 @@ class MainView: UIView {
 	
 	func setConstraints() {
 		addSubview(mainTableView)
-		[headerImageView, descriptionView].forEach {
+		[headerImageView].forEach {
 			mainTableView.addSubview($0)
 		}
 		
@@ -53,17 +53,11 @@ class MainView: UIView {
 			$0.top.trailing.leading.equalTo(self.safeAreaLayoutGuide)
 		}
 		
-		descriptionView.snp.makeConstraints {
-			$0.top.equalTo(headerImageView.snp.bottom).offset(-50)
-			$0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(30)
-			$0.height.equalTo(150)
-		}
-		
-		headerImageView.snp.makeConstraints {
-			$0.top.equalTo(mainTableView.snp.top)
-			$0.leading.trailing.equalTo(self.safeAreaLayoutGuide)
-			$0.height.equalTo(mainTableView).multipliedBy(0.3)
-		}
+//		descriptionView.snp.makeConstraints {
+//			$0.top.equalTo(headerImageView.snp.bottom).offset(-50)
+//			$0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(30)
+//			$0.height.equalTo(150)
+//		}
 		
 		bottonView.snp.makeConstraints {
 			$0.top.equalTo(mainTableView.snp.bottom)

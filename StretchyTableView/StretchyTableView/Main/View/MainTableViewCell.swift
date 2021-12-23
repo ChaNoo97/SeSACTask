@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 
+//MARK: View
 class MainTableViewCell: UITableViewCell {
 	let label = UILabel()
 	
