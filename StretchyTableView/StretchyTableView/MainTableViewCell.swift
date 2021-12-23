@@ -12,7 +12,19 @@ class MainTableViewCell: UITableViewCell {
 	let label = UILabel()
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-		super.init(style: style, reuseIdentifier: reuseIdentifier)
+		super.init(style: .default, reuseIdentifier: reuseIdentifier)
+		
+		setConstraints()
+		
+	}
+	
+	func setConstraints() {
+		contentView.addSubview(label)
+		
+		label.snp.makeConstraints {
+			$0.edges.equalTo(contentView).inset(10)
+		}
+		
 	}
 	
 	required init?(coder: NSCoder) {

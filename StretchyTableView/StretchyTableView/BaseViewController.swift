@@ -9,12 +9,13 @@ import UIKit
 import SnapKit
 
 class BaseViewController: UIViewController {
+	
 	override func viewDidLoad() {
-		
 		configure()
 		setupConstraints()
-		print("base")
+		print("base") 
 	}
+	
 	
 	func configure() {
 		print("q3")

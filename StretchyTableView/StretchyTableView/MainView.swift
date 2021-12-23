@@ -29,7 +29,7 @@ class MainView: UIView {
 	}
 	
 	func configure() {
-		mainTableView.backgroundColor = .black
+		mainTableView.backgroundColor = .white
 		descriptionView.backgroundColor = .white
 		headerImageView.backgroundColor = .red
 		bottonView.backgroundColor = .green
@@ -50,7 +50,7 @@ class MainView: UIView {
 		
 		mainTableView.snp.makeConstraints {
 			$0.height.equalTo(self).multipliedBy(0.8)
-			$0.edges.equalTo(self.safeAreaLayoutGuide)
+			$0.top.trailing.leading.equalTo(self.safeAreaLayoutGuide)
 		}
 		
 		descriptionView.snp.makeConstraints {
