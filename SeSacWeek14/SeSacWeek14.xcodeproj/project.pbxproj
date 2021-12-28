@@ -12,13 +12,22 @@
 		FEE1F3722779482D00773890 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3712779482D00773890 /* SignInViewController.swift */; };
 		FEE1F3772779482E00773890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE1F3762779482E00773890 /* Assets.xcassets */; };
 		FEE1F37A2779482E00773890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE1F3782779482E00773890 /* LaunchScreen.storyboard */; };
-		FEE1F38227794BBD00773890 /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F38127794BBD00773890 /* SignView.swift */; };
+		FEE1F38227794BBD00773890 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F38127794BBD00773890 /* SignInView.swift */; };
 		FEE1F38527794C1300773890 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FEE1F38427794C1300773890 /* SnapKit */; };
 		FEE1F3872779504000773890 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3862779504000773890 /* APIService.swift */; };
 		FEE1F3892779576B00773890 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3882779576B00773890 /* User.swift */; };
 		FEE1F38B27798A3300773890 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F38A27798A3300773890 /* MainViewController.swift */; };
 		FEE1F38D2779F3CD00773890 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F38C2779F3CD00773890 /* SignInViewModel.swift */; };
 		FEE1F38F2779F3DC00773890 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F38E2779F3DC00773890 /* Observable.swift */; };
+		FEE1F391277A289D00773890 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F390277A289D00773890 /* SignUpView.swift */; };
+		FEE1F393277A2A8700773890 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F392277A2A8700773890 /* SignUpViewController.swift */; };
+		FEE1F395277A914C00773890 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F394277A914C00773890 /* LottoViewController.swift */; };
+		FEE1F397277A94AA00773890 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F396277A94AA00773890 /* Lotto.swift */; };
+		FEE1F399277A962300773890 /* LottoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F398277A962300773890 /* LottoViewModel.swift */; };
+		FEE1F39B277AA67D00773890 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F39A277AA67D00773890 /* Person.swift */; };
+		FEE1F39D277AAA9A00773890 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F39C277AAA9A00773890 /* PersonViewModel.swift */; };
+		FEE1F39F277AAB8000773890 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F39E277AAB8000773890 /* PersonViewController.swift */; };
+		FEE1F3AA277ADB7B00773890 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3A9277ADB7B00773890 /* SignUpViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +38,21 @@
 		FEE1F3762779482E00773890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEE1F3792779482E00773890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEE1F37B2779482E00773890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEE1F38127794BBD00773890 /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
+		FEE1F38127794BBD00773890 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		FEE1F3862779504000773890 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FEE1F3882779576B00773890 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FEE1F38A27798A3300773890 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FEE1F38C2779F3CD00773890 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		FEE1F38E2779F3DC00773890 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		FEE1F390277A289D00773890 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		FEE1F392277A2A8700773890 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FEE1F394277A914C00773890 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		FEE1F396277A94AA00773890 /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
+		FEE1F398277A962300773890 /* LottoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewModel.swift; sourceTree = "<group>"; };
+		FEE1F39A277AA67D00773890 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		FEE1F39C277AAA9A00773890 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		FEE1F39E277AAB8000773890 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		FEE1F3A9277ADB7B00773890 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,20 +86,93 @@
 		FEE1F36C2779482D00773890 /* SeSacWeek14 */ = {
 			isa = PBXGroup;
 			children = (
+				FEE1F3A4277AD7D000773890 /* Sign */,
+				FEE1F3A0277AD78C00773890 /* Person */,
 				FEE1F36D2779482D00773890 /* AppDelegate.swift */,
 				FEE1F36F2779482D00773890 /* SceneDelegate.swift */,
-				FEE1F3712779482D00773890 /* SignInViewController.swift */,
-				FEE1F38C2779F3CD00773890 /* SignInViewModel.swift */,
-				FEE1F38E2779F3DC00773890 /* Observable.swift */,
+				FEE1F394277A914C00773890 /* LottoViewController.swift */,
+				FEE1F396277A94AA00773890 /* Lotto.swift */,
 				FEE1F38A27798A3300773890 /* MainViewController.swift */,
-				FEE1F38127794BBD00773890 /* SignView.swift */,
+				FEE1F38E2779F3DC00773890 /* Observable.swift */,
 				FEE1F3862779504000773890 /* APIService.swift */,
-				FEE1F3882779576B00773890 /* User.swift */,
+				FEE1F398277A962300773890 /* LottoViewModel.swift */,
 				FEE1F3762779482E00773890 /* Assets.xcassets */,
 				FEE1F3782779482E00773890 /* LaunchScreen.storyboard */,
 				FEE1F37B2779482E00773890 /* Info.plist */,
 			);
 			path = SeSacWeek14;
+			sourceTree = "<group>";
+		};
+		FEE1F3A0277AD78C00773890 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1F3A3277AD7AB00773890 /* ViewModel */,
+				FEE1F3A2277AD7A400773890 /* View */,
+				FEE1F3A1277AD79A00773890 /* Model */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		FEE1F3A1277AD79A00773890 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1F39A277AA67D00773890 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEE1F3A2277AD7A400773890 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1F39E277AAB8000773890 /* PersonViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEE1F3A3277AD7AB00773890 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1F39C277AAA9A00773890 /* PersonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEE1F3A4277AD7D000773890 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1F3A8277AD85C00773890 /* Model */,
+				FEE1F3A7277AD85500773890 /* ViewModel */,
+				FEE1F3A6277AD84D00773890 /* View */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		FEE1F3A6277AD84D00773890 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1F392277A2A8700773890 /* SignUpViewController.swift */,
+				FEE1F390277A289D00773890 /* SignUpView.swift */,
+				FEE1F3712779482D00773890 /* SignInViewController.swift */,
+				FEE1F38127794BBD00773890 /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEE1F3A7277AD85500773890 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1F38C2779F3CD00773890 /* SignInViewModel.swift */,
+				FEE1F3A9277ADB7B00773890 /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEE1F3A8277AD85C00773890 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1F3882779576B00773890 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,13 +251,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE1F39B277AA67D00773890 /* Person.swift in Sources */,
+				FEE1F393277A2A8700773890 /* SignUpViewController.swift in Sources */,
+				FEE1F39F277AAB8000773890 /* PersonViewController.swift in Sources */,
+				FEE1F399277A962300773890 /* LottoViewModel.swift in Sources */,
+				FEE1F3AA277ADB7B00773890 /* SignUpViewModel.swift in Sources */,
+				FEE1F39D277AAA9A00773890 /* PersonViewModel.swift in Sources */,
+				FEE1F397277A94AA00773890 /* Lotto.swift in Sources */,
+				FEE1F391277A289D00773890 /* SignUpView.swift in Sources */,
 				FEE1F38B27798A3300773890 /* MainViewController.swift in Sources */,
 				FEE1F3722779482D00773890 /* SignInViewController.swift in Sources */,
 				FEE1F3872779504000773890 /* APIService.swift in Sources */,
 				FEE1F3892779576B00773890 /* User.swift in Sources */,
 				FEE1F38F2779F3DC00773890 /* Observable.swift in Sources */,
 				FEE1F38D2779F3CD00773890 /* SignInViewModel.swift in Sources */,
-				FEE1F38227794BBD00773890 /* SignView.swift in Sources */,
+				FEE1F38227794BBD00773890 /* SignInView.swift in Sources */,
+				FEE1F395277A914C00773890 /* LottoViewController.swift in Sources */,
 				FEE1F36E2779482D00773890 /* AppDelegate.swift in Sources */,
 				FEE1F3702779482D00773890 /* SceneDelegate.swift in Sources */,
 			);
