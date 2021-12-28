@@ -19,12 +19,7 @@ class SignInViewController: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		viewModel.userName.bind { text in
-			self.mainView.usernameTextField.text = UserDefaults.standard.string(forKey: "username")
-		}
-		viewModel.userName.bind { text in
-			self.mainView.passwordTextField.text = UserDefaults.standard.string(forKey: "password")
-		}
+		viewModel.info()
 	}
 	
 	override func viewDidLoad() {
@@ -57,6 +52,7 @@ class SignInViewController: UIViewController {
 	
 	@objc func signButtonClicked() {
 		print(#function)
+		print(viewModel.userName.value)
 		print(viewModel.password.value)
 		viewModel.postUserLogin {
 			DispatchQueue.main.async {

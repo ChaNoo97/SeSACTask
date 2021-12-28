@@ -29,4 +29,10 @@ class SignInViewModel {
 		
 	}
 	
+	//이름바꿔주세요
+	func info() {
+		userName.value = UserDefaults.standard.string(forKey: "username") ?? ""
+		password.value = UserDefaults.standard.string(forKey: "password") ?? "" 
+	}
+	
 }

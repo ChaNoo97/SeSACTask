@@ -8,7 +8,9 @@
 import Foundation
 
 class Observable<T> {
+	
 	private var listener: ((T) -> Void)?
+	
 	var value: T {
 		didSet {
 			listener?(value)
@@ -24,5 +26,22 @@ class Observable<T> {
 		listener = closure
 	}
 }
+
+class User1 {
+	var name: String {
+		didSet {
+			printself()
+		}
+	}
+	
+	init(_ name: String) {
+		self.name = name
+	}
+	
+	func printself() {
+		print("dkdk")
+	}
+}
+
 
 

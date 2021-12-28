@@ -28,6 +28,9 @@
 		FEE1F39D277AAA9A00773890 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F39C277AAA9A00773890 /* PersonViewModel.swift */; };
 		FEE1F39F277AAB8000773890 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F39E277AAB8000773890 /* PersonViewController.swift */; };
 		FEE1F3AA277ADB7B00773890 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3A9277ADB7B00773890 /* SignUpViewModel.swift */; };
+		FEE1F3AC277B272600773890 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3AB277B272600773890 /* Board.swift */; };
+		FEE1F3AE277B278600773890 /* Mainview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3AD277B278600773890 /* Mainview.swift */; };
+		FEE1F3B0277B2BFB00773890 /* MainviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3AF277B2BFB00773890 /* MainviewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		FEE1F39C277AAA9A00773890 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		FEE1F39E277AAB8000773890 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		FEE1F3A9277ADB7B00773890 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		FEE1F3AB277B272600773890 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		FEE1F3AD277B278600773890 /* Mainview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mainview.swift; sourceTree = "<group>"; };
+		FEE1F3AF277B2BFB00773890 /* MainviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainviewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +98,6 @@
 				FEE1F36F2779482D00773890 /* SceneDelegate.swift */,
 				FEE1F394277A914C00773890 /* LottoViewController.swift */,
 				FEE1F396277A94AA00773890 /* Lotto.swift */,
-				FEE1F38A27798A3300773890 /* MainViewController.swift */,
 				FEE1F38E2779F3DC00773890 /* Observable.swift */,
 				FEE1F3862779504000773890 /* APIService.swift */,
 				FEE1F398277A962300773890 /* LottoViewModel.swift */,
@@ -150,6 +155,8 @@
 		FEE1F3A6277AD84D00773890 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FEE1F38A27798A3300773890 /* MainViewController.swift */,
+				FEE1F3AD277B278600773890 /* Mainview.swift */,
 				FEE1F392277A2A8700773890 /* SignUpViewController.swift */,
 				FEE1F390277A289D00773890 /* SignUpView.swift */,
 				FEE1F3712779482D00773890 /* SignInViewController.swift */,
@@ -163,6 +170,7 @@
 			children = (
 				FEE1F38C2779F3CD00773890 /* SignInViewModel.swift */,
 				FEE1F3A9277ADB7B00773890 /* SignUpViewModel.swift */,
+				FEE1F3AF277B2BFB00773890 /* MainviewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FEE1F3882779576B00773890 /* User.swift */,
+				FEE1F3AB277B272600773890 /* Board.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE1F3B0277B2BFB00773890 /* MainviewModel.swift in Sources */,
 				FEE1F39B277AA67D00773890 /* Person.swift in Sources */,
+				FEE1F3AE277B278600773890 /* Mainview.swift in Sources */,
 				FEE1F393277A2A8700773890 /* SignUpViewController.swift in Sources */,
 				FEE1F39F277AAB8000773890 /* PersonViewController.swift in Sources */,
 				FEE1F399277A962300773890 /* LottoViewModel.swift in Sources */,
@@ -268,6 +279,7 @@
 				FEE1F38227794BBD00773890 /* SignInView.swift in Sources */,
 				FEE1F395277A914C00773890 /* LottoViewController.swift in Sources */,
 				FEE1F36E2779482D00773890 /* AppDelegate.swift in Sources */,
+				FEE1F3AC277B272600773890 /* Board.swift in Sources */,
 				FEE1F3702779482D00773890 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
