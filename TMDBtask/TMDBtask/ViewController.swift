@@ -87,6 +87,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = searchCollectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell.reusIdentifier", for: indexPath) as! SearchCollectionViewCell
+		let row = tvShowsData?.results[indexPath.row]
 		cell.posterImage.image = loadImage(url: tvShowsData?.results[indexPath.row].posterPath)
 		return cell
 	}

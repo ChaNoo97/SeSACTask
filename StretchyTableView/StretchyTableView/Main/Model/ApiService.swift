@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftUI
+
+class ApiService {
+	
+	
+	
+}

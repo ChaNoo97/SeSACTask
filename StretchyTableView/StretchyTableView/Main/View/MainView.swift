@@ -11,9 +11,7 @@ import SnapKit
 //MARK: View
 class MainView: UIView {
 	let mainTableView = UITableView()
-	let headerImageView = UIImageView()
-	let descriptionView = UIView()
-	let bottonView = UIView()
+	let bottomView = UIView()
 	let refreshButton = UIButton()
 	let shareButton = UIButton()
 	
@@ -31,21 +29,17 @@ class MainView: UIView {
 	
 	func configure() {
 		mainTableView.backgroundColor = .white
-		headerImageView.backgroundColor = .red
-		bottonView.backgroundColor = .green
+		bottomView.backgroundColor = .green
 		refreshButton.backgroundColor = .cyan
 		shareButton.backgroundColor = .cyan
 	}
 	
 	func setConstraints() {
 		addSubview(mainTableView)
-		[headerImageView].forEach {
-			mainTableView.addSubview($0)
-		}
 		
-		addSubview(bottonView)
+		addSubview(bottomView)
 		[refreshButton, shareButton].forEach {
-			bottonView.addSubview($0)
+			bottomView.addSubview($0)
 		}
 		
 		mainTableView.snp.makeConstraints {
@@ -53,28 +47,22 @@ class MainView: UIView {
 			$0.top.trailing.leading.equalTo(self.safeAreaLayoutGuide)
 		}
 		
-//		descriptionView.snp.makeConstraints {
-//			$0.top.equalTo(headerImageView.snp.bottom).offset(-50)
-//			$0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(30)
-//			$0.height.equalTo(150)
-//		}
-		
-		bottonView.snp.makeConstraints {
+		bottomView.snp.makeConstraints {
 			$0.top.equalTo(mainTableView.snp.bottom)
 			$0.leading.trailing.bottom.equalTo(self.safeAreaLayoutGuide)
 		}
 		
 		refreshButton.snp.makeConstraints {
-			$0.leading.equalTo(bottonView.snp.leading).inset(10)
-			$0.top.equalTo(bottonView.snp.top).inset(10)
-			$0.bottom.equalTo(bottonView.snp.bottom).inset(10)
+			$0.leading.equalTo(bottomView.snp.leading).inset(10)
+			$0.top.equalTo(bottomView.snp.top).inset(10)
+			$0.bottom.equalTo(bottomView.snp.bottom).inset(10)
 			$0.width.equalTo(refreshButton.snp.height)
 		}
 		
 		shareButton.snp.makeConstraints {
-			$0.trailing.equalTo(bottonView.snp.trailing).inset(10)
-			$0.top.equalTo(bottonView.snp.top).inset(10)
-			$0.bottom.equalTo(bottonView.snp.bottom).inset(10)
+			$0.trailing.equalTo(bottomView.snp.trailing).inset(10)
+			$0.top.equalTo(bottomView.snp.top).inset(10)
+			$0.bottom.equalTo(bottomView.snp.bottom).inset(10)
 			$0.leading.equalTo(refreshButton.snp.trailing).offset(10)
 		}
 	}

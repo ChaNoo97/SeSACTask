@@ -12,17 +12,21 @@ import SnapKit
 class MainViewController: BaseViewController {
 	
 	var mainView = MainView()
+	var headerView = StretchyHeaderView()
+	var toggle = false
+	var apiService = ApiService()
+	
 	
 	override func loadView() {
 		self.view = mainView
 	}
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		mainView.mainTableView.dataSource = self
 		mainView.mainTableView.delegate = self
-		
 		mainView.mainTableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.reuseIdentifier)
+		headerView.moreButton.addTarget(self, action: #selector(moreButtonClicked), for: .touchUpInside)
 	}
 	
 	override func configure() {
@@ -33,43 +37,54 @@ class MainViewController: BaseViewController {
 		
 	}
 	
-	func descriptionViewSetup(view: UIView) {
-		view.addSubview(mainView.descriptionView)
-		mainView.descriptionView.backgroundColor = .black
-		mainView.descriptionView.snp.makeConstraints {
-			$0.leading.equalTo(view.snp.leading).inset(20)
-			$0.trailing.equalTo(view.snp.trailing).inset(20)
-			$0.top.equalTo(view.snp.bottom).offset(-50)
-			$0.height.equalTo(150)
+	@objc func moreButtonClicked() {
+		print(#function)
+		toggle.toggle()
+		print(toggle)
+		if toggle {
+			headerView.descriptionView.snp.updateConstraints {
+				$0.height.equalTo(300)
+			}
+		} else {
+			headerView.descriptionView.snp.updateConstraints {
+				$0.height.equalTo(150)
+			}
 		}
+		mainView.mainTableView.reloadData()
 	}
 	
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 100
+		return 2
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = mainView.mainTableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseIdentifier) as! MainTableViewCell
 		cell.label.text = "\(indexPath.row)"
+		cell.backgroundColor = .lightGray
+		
 		return cell
 	}
 	
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 50
-	}
-	
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		let headerView = mainView.headerImageView
-		// mvvm 관점에서 이게 맞을까?
-		descriptionViewSetup(view: headerView)
 		return headerView
 	}
 	
-	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 300
 	}
+	
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		if toggle {
+			return 550
+		} else {
+			return 400
+		}
+	}
+	
+
+
 	
 }
