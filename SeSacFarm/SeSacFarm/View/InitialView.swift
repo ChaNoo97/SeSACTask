@@ -31,12 +31,11 @@ class InitialView: UIView, ViewProtocol{
 		
 		imageView.backgroundColor = .blue
 		
-		titleLable.backgroundColor = .red
+		
 		titleLable.text = "당신 근처의 새싹농장"
-		titleLable.font = .boldSystemFont(ofSize: 15)
+		titleLable.font = .boldSystemFont(ofSize: 20)
 		titleLable.textAlignment = .center
 		
-		subTitleLabel.backgroundColor = .green
 		subTitleLabel.text = "iOS 지식부터 바람의 나라까지 지금 SeSAC에서 함께해보세요!"
 		subTitleLabel.numberOfLines = 2
 		subTitleLabel.textAlignment = .center
@@ -47,6 +46,10 @@ class InitialView: UIView, ViewProtocol{
 		
 		label.text = "이미 계정이 있나요? 로그인"
 		label.textColor = .placeholderText
+		let attributedStr = NSMutableAttributedString(string: label.text!)
+		attributedStr.addAttribute(.foregroundColor, value: UIColor.green, range: (label.text! as NSString).range(of: "로그인"))
+		label.attributedText = attributedStr
+		
 		label.font = .systemFont(ofSize: 15)
 		label.textAlignment = .center
 		
@@ -66,14 +69,14 @@ class InitialView: UIView, ViewProtocol{
 			$0.top.equalTo(imageView.snp.bottom)
 			$0.centerX.equalTo(self)
 			$0.width.equalTo(label.snp.width)
-			$0.height.equalTo(44)
+			$0.height.equalTo(30)
 		}
 		
 		subTitleLabel.snp.makeConstraints {
 			$0.top.equalTo(titleLable.snp.bottom)
 			$0.centerX.equalTo(self)
 			$0.width.equalTo(titleLable.snp.width)
-			$0.height.equalTo(60)
+			$0.height.equalTo(40)
 		}
 		
 		button.snp.makeConstraints {

@@ -17,6 +17,10 @@
 		FEE1F3E3277E0F6300773890 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3E2277E0F6300773890 /* MainButton.swift */; };
 		FEE1F3E8277E153800773890 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3E7277E153800773890 /* ViewProtocol.swift */; };
 		FEE1F3EA277E17BF00773890 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3E9277E17BF00773890 /* BaseViewController.swift */; };
+		FEE1F3EC277F448C00773890 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3EB277F448C00773890 /* SignUpView.swift */; };
+		FEE1F3EE277F45B300773890 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3ED277F45B300773890 /* SignUpViewController.swift */; };
+		FEE1F3F027804DFC00773890 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3EF27804DFC00773890 /* SignInView.swift */; };
+		FEE1F3F227804E0900773890 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3F127804E0900773890 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		FEE1F3E2277E0F6300773890 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		FEE1F3E7277E153800773890 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		FEE1F3E9277E17BF00773890 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FEE1F3EB277F448C00773890 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		FEE1F3ED277F45B300773890 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FEE1F3EF27804DFC00773890 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		FEE1F3F127804E0900773890 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,10 @@
 			children = (
 				FEE1F3D6277E0C6A00773890 /* InitialViewController.swift */,
 				FEE1F3DF277E0F0000773890 /* InitialView.swift */,
+				FEE1F3ED277F45B300773890 /* SignUpViewController.swift */,
+				FEE1F3EB277F448C00773890 /* SignUpView.swift */,
+				FEE1F3F127804E0900773890 /* SignInViewController.swift */,
+				FEE1F3EF27804DFC00773890 /* SignInView.swift */,
 				FEE1F3E5277E151700773890 /* New Group */,
 				FEE1F3E1277E0F2400773890 /* ShareView */,
 			);
@@ -202,11 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE1F3F227804E0900773890 /* SignInViewController.swift in Sources */,
 				FEE1F3D7277E0C6A00773890 /* InitialViewController.swift in Sources */,
 				FEE1F3E0277E0F0000773890 /* InitialView.swift in Sources */,
 				FEE1F3C3277E0AAF00773890 /* AppDelegate.swift in Sources */,
 				FEE1F3C5277E0AAF00773890 /* SceneDelegate.swift in Sources */,
+				FEE1F3F027804DFC00773890 /* SignInView.swift in Sources */,
+				FEE1F3EC277F448C00773890 /* SignUpView.swift in Sources */,
 				FEE1F3E8277E153800773890 /* ViewProtocol.swift in Sources */,
+				FEE1F3EE277F45B300773890 /* SignUpViewController.swift in Sources */,
 				FEE1F3EA277E17BF00773890 /* BaseViewController.swift in Sources */,
 				FEE1F3E3277E0F6300773890 /* MainButton.swift in Sources */,
 			);

@@ -16,11 +16,33 @@ class InitialViewController: BaseViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print("view")
-
+		navigationItem.backButtonTitle = ""
+		mainView.button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+		setupLabelTap()
 	}
 	
 	override func configure() {
 		super.configure()
 	}
+	
+	@objc func buttonClicked() {
+		let vc = SignUpViewController()
+		navigationController?.pushViewController(vc, animated: true)
+	}
+	
+	@objc func labelTapped(_ sender: UITapGestureRecognizer) {
+			let vc = SignInViewController()
+		navigationController?.pushViewController(vc, animated: true)
+		}
+		
+		func setupLabelTap() {
+			
+			let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.labelTapped(_:)))
+			self.mainView.label.isUserInteractionEnabled = true
+			self.mainView.label.addGestureRecognizer(labelTap)
+			
+		}
+
+	
+	
 }
