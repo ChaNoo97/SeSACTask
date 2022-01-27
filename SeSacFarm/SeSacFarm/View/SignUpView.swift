@@ -11,7 +11,7 @@ import SnapKit
 class SignUpView: UIView, ViewProtocol {
 	
 	let emailTextField = UITextField()
-	let nickNameTextField = UITextField()
+	let userNameTextField = UITextField()
 	let passwordTextField = UITextField()
 	let checkPasswordTextField = UITextField()
 	let button = MainButton()
@@ -29,12 +29,12 @@ class SignUpView: UIView, ViewProtocol {
 	func configure() {
 		let placeholderText = ["이메일 주소", "닉네임", "비밀번호", "비밀번호 확인"]
 		
-		[emailTextField, nickNameTextField, passwordTextField, checkPasswordTextField].forEach {
+		[emailTextField, userNameTextField, passwordTextField, checkPasswordTextField].forEach {
 			$0.borderStyle = .roundedRect
 		}
 		
 		emailTextField.placeholder = placeholderText[0]
-		nickNameTextField.placeholder = placeholderText[1]
+		userNameTextField.placeholder = placeholderText[1]
 		passwordTextField.placeholder = placeholderText[2]
 		checkPasswordTextField.placeholder = placeholderText[3]
 		
@@ -43,7 +43,7 @@ class SignUpView: UIView, ViewProtocol {
 	}
 	
 	func setUpConstranits() {
-		[emailTextField, nickNameTextField, passwordTextField, checkPasswordTextField, button].forEach {
+		[emailTextField, userNameTextField, passwordTextField, checkPasswordTextField, button].forEach {
 			addSubview($0)
 		}
 		
@@ -53,14 +53,14 @@ class SignUpView: UIView, ViewProtocol {
 			$0.height.equalTo(50)
 		}
 		
-		nickNameTextField.snp.makeConstraints {
+		userNameTextField.snp.makeConstraints {
 			$0.top.equalTo(emailTextField.snp.bottom).offset(10)
 			$0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(10)
 			$0.height.equalTo(50)
 		}
 		
 		passwordTextField.snp.makeConstraints {
-			$0.top.equalTo(nickNameTextField.snp.bottom).offset(10)
+			$0.top.equalTo(userNameTextField.snp.bottom).offset(10)
 			$0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(10)
 			$0.height.equalTo(50)
 		}

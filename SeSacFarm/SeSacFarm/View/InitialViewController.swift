@@ -18,6 +18,7 @@ class InitialViewController: BaseViewController {
 		super.viewDidLoad()
 		navigationItem.backButtonTitle = ""
 		mainView.button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+		print(UserDefaults.standard.string(forKey: "userEmail") ?? "")
 		setupLabelTap()
 	}
 	
@@ -36,7 +37,6 @@ class InitialViewController: BaseViewController {
 		}
 		
 		func setupLabelTap() {
-			
 			let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.labelTapped(_:)))
 			self.mainView.label.isUserInteractionEnabled = true
 			self.mainView.label.addGestureRecognizer(labelTap)

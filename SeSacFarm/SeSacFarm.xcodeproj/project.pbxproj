@@ -21,6 +21,12 @@
 		FEE1F3EE277F45B300773890 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3ED277F45B300773890 /* SignUpViewController.swift */; };
 		FEE1F3F027804DFC00773890 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3EF27804DFC00773890 /* SignInView.swift */; };
 		FEE1F3F227804E0900773890 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3F127804E0900773890 /* SignInViewController.swift */; };
+		FEE1F3F427809E3E00773890 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3F327809E3E00773890 /* Endpoint.swift */; };
+		FEE1F3F62780C03B00773890 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3F52780C03B00773890 /* SignUpViewModel.swift */; };
+		FEE1F3FA2780C0FA00773890 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3F92780C0FA00773890 /* Observable.swift */; };
+		FEE1F3FC2780C44B00773890 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3FB2780C44B00773890 /* APIService.swift */; };
+		FEE1F4002780C84300773890 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F3FF2780C84300773890 /* User.swift */; };
+		FEE1F4022780C97B00773890 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1F4012780C97B00773890 /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,12 @@
 		FEE1F3ED277F45B300773890 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FEE1F3EF27804DFC00773890 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		FEE1F3F127804E0900773890 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FEE1F3F327809E3E00773890 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FEE1F3F52780C03B00773890 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		FEE1F3F92780C0FA00773890 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		FEE1F3FB2780C44B00773890 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FEE1F3FF2780C84300773890 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FEE1F4012780C97B00773890 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,7 @@
 		FEE1F3C1277E0AAF00773890 /* SeSacFarm */ = {
 			isa = PBXGroup;
 			children = (
+				FEE1F3F92780C0FA00773890 /* Observable.swift */,
 				FEE1F3DE277E0EE400773890 /* API */,
 				FEE1F3DD277E0ED900773890 /* Model */,
 				FEE1F3DC277E0ED000773890 /* ViewModel */,
@@ -103,6 +116,8 @@
 		FEE1F3DC277E0ED000773890 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FEE1F3F52780C03B00773890 /* SignUpViewModel.swift */,
+				FEE1F4012780C97B00773890 /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -110,6 +125,7 @@
 		FEE1F3DD277E0ED900773890 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FEE1F3FF2780C84300773890 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +133,8 @@
 		FEE1F3DE277E0EE400773890 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FEE1F3F327809E3E00773890 /* Endpoint.swift */,
+				FEE1F3FB2780C44B00773890 /* APIService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -215,15 +233,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE1F3F227804E0900773890 /* SignInViewController.swift in Sources */,
+				FEE1F3FC2780C44B00773890 /* APIService.swift in Sources */,
+				FEE1F3F62780C03B00773890 /* SignUpViewModel.swift in Sources */,
 				FEE1F3D7277E0C6A00773890 /* InitialViewController.swift in Sources */,
 				FEE1F3E0277E0F0000773890 /* InitialView.swift in Sources */,
+				FEE1F4022780C97B00773890 /* SignInViewModel.swift in Sources */,
 				FEE1F3C3277E0AAF00773890 /* AppDelegate.swift in Sources */,
 				FEE1F3C5277E0AAF00773890 /* SceneDelegate.swift in Sources */,
+				FEE1F4002780C84300773890 /* User.swift in Sources */,
 				FEE1F3F027804DFC00773890 /* SignInView.swift in Sources */,
 				FEE1F3EC277F448C00773890 /* SignUpView.swift in Sources */,
 				FEE1F3E8277E153800773890 /* ViewProtocol.swift in Sources */,
 				FEE1F3EE277F45B300773890 /* SignUpViewController.swift in Sources */,
+				FEE1F3FA2780C0FA00773890 /* Observable.swift in Sources */,
 				FEE1F3EA277E17BF00773890 /* BaseViewController.swift in Sources */,
+				FEE1F3F427809E3E00773890 /* Endpoint.swift in Sources */,
 				FEE1F3E3277E0F6300773890 /* MainButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
