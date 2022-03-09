@@ -26,8 +26,9 @@ class thirdVC: UIViewController {
 		button.backgroundColor = .brown
 		button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
 		button.snp.makeConstraints {
-			$0.center.equalTo(view.safeAreaLayoutGuide)
-			$0.size.equalTo(100)
+			$0.centerX.equalTo(view.safeAreaLayoutGuide)
+			$0.top.equalTo(view.snp.top)
+			$0.size.equalTo(50)
 		}
 	}
 	
